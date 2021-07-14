@@ -2,7 +2,7 @@
 
 - Made for The Odin Project curriculum
 - Re-create a YouTube page by embedding a YouTube video and styling the page with HTML and CSS
-- (Personally, I wanted to use React so i didnt have to recreate a lot of elements but this project is for HTML/CSS so I stuck with the basics)
+- (Personally, I wanted to use React so I didnt have to recreate a lot of elements but this project is for HTML/CSS so I stuck with the basics)
 
 <h3> Things I'm proud of: </h3>
 
