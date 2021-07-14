@@ -1,1090 +1,2734 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <link
-  href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap"
-  rel="stylesheet"
-/>
-  <title>Youtube</title>
-</head>
-<body>
-  <!-- navbar -->
-  <navbar>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Youtube</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <navbar>
+      <!-- navbar left -->
+      <div class="nav-left">
+        <!-- hamburger icon -->
+        <button class="hamburger-menu-button">
+          <svg viewbox="0 0 12 6.5" width="30">
+            <path
+              d="M1 1h8M1 3.5h 8M1 6h8"
+              stroke="#fff"
+              stroke-width="1"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+        <!-- youtube logo -->
+        <a
+          class="logo-button"
+          href="https://www.youtube.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="YouTube homepage"
+        >
+          <img id="nav-logo" src="/images/logo.png" alt="" />
+        </a>
+      </div>
 
-    <!-- navbar left -->
-    <div class="nav-left">
-      <!-- hamburger icon -->
-      <button class="hamburger-menu-button">
-        <svg viewbox="0 0 12 6.5" width="30">
-          <path d="M1 1h8M1 3.5h 8M1 6h8" 
-                stroke="#fff" 
-                stroke-width="1" 
-                stroke-linecap="round"/>
-        </svg>
-      </button>
-      <!-- youtube logo -->
-      <a class="logo-button" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" title="YouTube homepage">
-        <img id="nav-logo" src="/images/logo.PNG" alt="">
-      </a>
-    </div>
-
-    <!-- navbar center -->
-    <div class="nav-center">
-      <!-- search bar -->
-      <input class="search-input" type="text" placeholder="Search">
-      <div id="search-icon">
-        <svg id="search-svg" focusable="false" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" ></path></svg>
-      </div>
-      <!-- microphone icon -->
-      <div class="microphone-icon-container" data-title="Search with your voice">
-        <svg id="microphone-icon" class="nav-icons" viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z" class="style-scope yt-icon"></path></g></svg>
-      </div>
-    </div>
-
-    <!-- navbar right -->
-    <div class="nav-right">
-      <!-- create icon -->
-      <div class="create-icon-container" data-title="Create">
-        <svg id="create-icon" class="nav-icons" viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4zM14 13h-3v3H9v-3H6v-2h3V8h2v3h3v2z" class="style-scope yt-icon"></path></g></svg>
-      </div>
-      <!-- apps icon -->
-      <div class="apps-icon-container"  data-title="YouTube apps">
-        <svg id="apps-icon" class="nav-icons" viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z" class="style-scope yt-icon"></path></g></svg>
-      </div>
-      <!-- bell icon -->
-      <div class="apps-icon-container"  data-title="Notifications">
-        <svg id="bell-icon" class="nav-icons" viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z" class="style-scope yt-icon"></path></g></svg>
-      </div>
-      <!-- google avi -->
-      <div class="google-avi-container"  data-title="Settings">
-        <img id="img" class="google-avi" alt="Avatar image" height="32" width="32" src="https://yt3.ggpht.com/yti/APfAmoHPZkau3MYjICMRijp7WBVq0KMijDUGWG05BQ=s88-c-k-c0x00ffffff-no-rj-mo">
-      </div>
-    </div>
-  </navbar>
-  <div class="content">
-    <main>
-
-      <!-- video -->
-      <section class="video-container">
-        <div class="player">
-          <iframe
-            src="https://www.youtube.com/embed/3PHXvlpOkf4"
-            frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+      <!-- navbar center -->
+      <div class="nav-center">
+        <!-- search bar -->
+        <input class="search-input" type="text" placeholder="Search" />
+        <div id="search-icon">
+          <svg
+            id="search-svg"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+            viewbox="0 0 24 24"
+          >
+            <path
+              d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+            ></path>
+          </svg>
         </div>
-      </section>
-
-      <!-- video info -->
-      <div class="video-info">
-        <h1 class="video-title">Build 15 JavaScript Projects - Vanilla JavaScript Course</h1>
-       
-        <!-- views, date, description, likes, dislikes, share, save, clip -->
-        <div class="video-primary-info">
-
-          <div class="video-info-left">
-            <div class="video-views-and-description">
-              <span class="video-views-date">759,394 views • Jun 9, 2020 • Sharpen your JavaScript skills by building 15 projects using plain JavaScript without frameworks. In this tutorial course, you will be taught step-by-step how to build JavaScript projects.</span>
-            </div>
-            <span class="show-more">SHOW MORE</span>
-          </div>
-          
-          <div class="video-info-right">
-            <div class="video-info-button-container">
-
-              <!-- likes button -->
-              <button class="info-buttons" data-title="I like this">
-                <div class="info-icons-container">
-                  <svg class="info-icons" viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1.91l-.01-.01L23 10z" class="style-scope yt-icon"></path></g></svg>
-                </div>
-                <span class="video-info-button-numbers">23K</span>
-              </button>
-
-              <!-- dislikes button -->
-              <button class="info-buttons" data-title="I dislike this">
-                <div class="info-icons-container">
-                  <svg class="info-icons" viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v1.91l.01.01L1 14c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" class="style-scope yt-icon"></path></g></svg>
-                  </div>
-                <span class="video-info-button-numbers">0</span>
-              </button>
-
-              <!-- clips button -->
-              <button class="info-buttons" data-title="Clip">
-                <div class="info-icons-container">
-                  <svg class="info-icons" viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><circle cx="6" cy="18" r="2" fill="none" class="style-scope yt-icon"></circle><circle cx="6" cy="6" r="2" fill="none" class="style-scope yt-icon"></circle><path d="M9.64 7.64c.23-.5.36-1.05.36-1.64 0-2.21-1.79-4-4-4S2 3.79 2 6s1.79 4 4 4c.59 0 1.14-.13 1.64-.36L10 12l-2.36 2.36C7.14 14.13 6.59 14 6 14c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4c0-.59-.13-1.14-.36-1.64L12 14l7 7h3v-1L9.64 7.64zM6 8c-1.1 0-2-.89-2-2s.9-2 2-2 2 .89 2 2-.9 2-2 2zm0 12c-1.1 0-2-.89-2-2s.9-2 2-2 2 .89 2 2-.9 2-2 2zm6-7.5c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5zM19 3l-6 6 2 2 7-7V3z" class="style-scope yt-icon"></path></g></svg>
-                  </div>
-                <span class="video-info-button-text">CLIP</span>
-              </button>
-              
-              <!-- share button -->
-              <button class="info-buttons" data-title="Share">
-                <div class="info-icons-container">
-                  <svg class="info-icons" viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g mirror-in-rtl="" class="style-scope yt-icon"><path d="M14 9V3L22 12L14 21V15C8.44 15 4.78 17.03 2 21C3.11 15.33 6.22 10.13 14 9Z" class="style-scope yt-icon"></path></g></svg>
-                  </div>
-                <span class="video-info-button-text">SHARE</span>
-              </button>
-
-              <!-- save button -->
-              <button class="info-buttons" data-title="Save">
-                <div class="info-icons-container">
-                  <svg class="info-icons" viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M14 10H2v2h12v-2zm0-4H2v2h12V6zm4 8v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM2 16h8v-2H2v2z" class="style-scope yt-icon"></path></g></svg>
-                  </div>
-                <span class="video-info-button-text">SAVE</span>
-              </button>
-
-              <!-- more options button -->
-              <button class="info-buttons">
-                <div class="info-icons-container">
-                  <svg class="info-icons" viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><circle cx="5" cy="12" r="2" class="style-scope yt-icon"></circle><circle cx="12" cy="12" r="2" class="style-scope yt-icon"></circle><circle cx="19" cy="12" r="2" class="style-scope yt-icon"></circle></g></svg>
-                  </div>
-              </button>
-            </div>
-          </div>
+        <!-- microphone icon -->
+        <div
+          class="microphone-icon-container"
+          data-title="Search with your voice"
+        >
+          <svg
+            id="microphone-icon"
+            class="nav-icons"
+            viewbox="0 0 24 24"
+            preserveaspectratio="xMidYMid meet"
+            focusable="false"
+            style="
+              pointer-events: none;
+              display: block;
+              width: 100%;
+              height: 100%;
+            "
+          >
+            <g class="style-scope yt-icon">
+              <path
+                d="M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"
+                class="style-scope yt-icon"
+              ></path>
+            </g>
+          </svg>
         </div>
+      </div>
 
-        <!-- channel and comment preview containers -->
-        <div class="channel-and-comment-preview-contianers">
+      <!-- navbar right -->
+      <div class="nav-right">
+        <!-- create icon -->
+        <div class="create-icon-container" data-title="Create">
+          <svg
+            id="create-icon"
+            class="nav-icons"
+            viewbox="0 0 24 24"
+            preserveaspectratio="xMidYMid meet"
+            focusable="false"
+            style="
+              pointer-events: none;
+              display: block;
+              width: 100%;
+              height: 100%;
+            "
+          >
+            <g class="style-scope yt-icon">
+              <path
+                d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4zM14 13h-3v3H9v-3H6v-2h3V8h2v3h3v2z"
+                class="style-scope yt-icon"
+              ></path>
+            </g>
+          </svg>
+        </div>
+        <!-- apps icon -->
+        <div class="apps-icon-container" data-title="YouTube apps">
+          <svg
+            id="apps-icon"
+            class="nav-icons"
+            viewbox="0 0 24 24"
+            preserveaspectratio="xMidYMid meet"
+            focusable="false"
+            style="
+              pointer-events: none;
+              display: block;
+              width: 100%;
+              height: 100%;
+            "
+          >
+            <g class="style-scope yt-icon">
+              <path
+                d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z"
+                class="style-scope yt-icon"
+              ></path>
+            </g>
+          </svg>
+        </div>
+        <!-- bell icon -->
+        <div class="apps-icon-container" data-title="Notifications">
+          <svg
+            id="bell-icon"
+            class="nav-icons"
+            viewbox="0 0 24 24"
+            preserveaspectratio="xMidYMid meet"
+            focusable="false"
+            style="
+              pointer-events: none;
+              display: block;
+              width: 100%;
+              height: 100%;
+            "
+          >
+            <g class="style-scope yt-icon">
+              <path
+                d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"
+                class="style-scope yt-icon"
+              ></path>
+            </g>
+          </svg>
+        </div>
+        <!-- google avi -->
+        <div class="google-avi-container" data-title="Settings">
+          <img
+            id="img"
+            class="google-avi"
+            alt="Avatar image"
+            height="32"
+            width="32"
+            src="https://yt3.ggpht.com/yti/APfAmoHPZkau3MYjICMRijp7WBVq0KMijDUGWG05BQ=s88-c-k-c0x00ffffff-no-rj-mo"
+          />
+        </div>
+      </div>
+    </navbar>
+    <div class="content">
+      <main>
+        <!-- video -->
+        <section class="video-container">
+          <div class="player">
+            <iframe
+              src="https://www.youtube.com/embed/3PHXvlpOkf4"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </section>
 
-          <!-- channel -->
-          <div class="channel-container">
-            <div class="channel-container-left">
-              <a href="https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ" target="_blank" rel="noopener noreferrer"><img class="channel-avi" src="/images/fccLogo.JPG" alt="fcc avi"></a>
-              <div class="channel-name-and-subs">
-                <a href="https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ" target="_blank" rel="noopener noreferrer" class="channel-name">freeCodeCamp.org
-                  <!-- verified icon -->
-                  <div class="info-icons-container verified-container">
-                    <svg class="info-icons" viewbox="0 0 30 30 " preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10 S17.52,2,12,2z M9.92,17.93l-4.95-4.95l2.05-2.05l2.9,2.9l7.35-7.35l2.05,2.05L9.92,17.93z" class="style-scope yt-icon"></path></g></svg>
+        <!-- video info -->
+        <div class="video-info">
+          <h1 class="video-title">
+            Build 15 JavaScript Projects - Vanilla JavaScript Course
+          </h1>
+
+          <!-- views, date, description, likes, dislikes, share, save, clip -->
+          <div class="video-primary-info">
+            <div class="video-info-left">
+              <div class="video-views-and-description">
+                <span class="video-views-date"
+                  >759,394 views • Jun 9, 2020 • Sharpen your JavaScript skills
+                  by building 15 projects using plain JavaScript without
+                  frameworks. In this tutorial course, you will be taught
+                  step-by-step how to build JavaScript projects.</span
+                >
+              </div>
+              <span class="show-more">SHOW MORE</span>
+            </div>
+
+            <div class="video-info-right">
+              <div class="video-info-button-container">
+                <!-- likes button -->
+                <button class="info-buttons" data-title="I like this">
+                  <div class="info-icons-container">
+                    <svg
+                      class="info-icons"
+                      viewbox="0 0 24 24"
+                      preserveaspectratio="xMidYMid meet"
+                      focusable="false"
+                      style="
+                        pointer-events: none;
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                      "
+                    >
+                      <g class="style-scope yt-icon">
+                        <path
+                          d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1.91l-.01-.01L23 10z"
+                          class="style-scope yt-icon"
+                        ></path>
+                      </g>
+                    </svg>
                   </div>
-                </a>
-                <span class="subscribers">3.82M subscribers</span>
+                  <span class="video-info-button-numbers">23K</span>
+                </button>
+
+                <!-- dislikes button -->
+                <button class="info-buttons" data-title="I dislike this">
+                  <div class="info-icons-container">
+                    <svg
+                      class="info-icons"
+                      viewbox="0 0 24 24"
+                      preserveaspectratio="xMidYMid meet"
+                      focusable="false"
+                      style="
+                        pointer-events: none;
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                      "
+                    >
+                      <g class="style-scope yt-icon">
+                        <path
+                          d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v1.91l.01.01L1 14c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z"
+                          class="style-scope yt-icon"
+                        ></path>
+                      </g>
+                    </svg>
+                  </div>
+                  <span class="video-info-button-numbers">0</span>
+                </button>
+
+                <!-- clips button -->
+                <button class="info-buttons" data-title="Clip">
+                  <div class="info-icons-container">
+                    <svg
+                      class="info-icons"
+                      viewbox="0 0 24 24"
+                      preserveaspectratio="xMidYMid meet"
+                      focusable="false"
+                      style="
+                        pointer-events: none;
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                      "
+                    >
+                      <g class="style-scope yt-icon">
+                        <circle
+                          cx="6"
+                          cy="18"
+                          r="2"
+                          fill="none"
+                          class="style-scope yt-icon"
+                        ></circle>
+                        <circle
+                          cx="6"
+                          cy="6"
+                          r="2"
+                          fill="none"
+                          class="style-scope yt-icon"
+                        ></circle>
+                        <path
+                          d="M9.64 7.64c.23-.5.36-1.05.36-1.64 0-2.21-1.79-4-4-4S2 3.79 2 6s1.79 4 4 4c.59 0 1.14-.13 1.64-.36L10 12l-2.36 2.36C7.14 14.13 6.59 14 6 14c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4c0-.59-.13-1.14-.36-1.64L12 14l7 7h3v-1L9.64 7.64zM6 8c-1.1 0-2-.89-2-2s.9-2 2-2 2 .89 2 2-.9 2-2 2zm0 12c-1.1 0-2-.89-2-2s.9-2 2-2 2 .89 2 2-.9 2-2 2zm6-7.5c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5zM19 3l-6 6 2 2 7-7V3z"
+                          class="style-scope yt-icon"
+                        ></path>
+                      </g>
+                    </svg>
+                  </div>
+                  <span class="video-info-button-text">CLIP</span>
+                </button>
+
+                <!-- share button -->
+                <button class="info-buttons" data-title="Share">
+                  <div class="info-icons-container">
+                    <svg
+                      class="info-icons"
+                      viewbox="0 0 24 24"
+                      preserveaspectratio="xMidYMid meet"
+                      focusable="false"
+                      style="
+                        pointer-events: none;
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                      "
+                    >
+                      <g mirror-in-rtl="" class="style-scope yt-icon">
+                        <path
+                          d="M14 9V3L22 12L14 21V15C8.44 15 4.78 17.03 2 21C3.11 15.33 6.22 10.13 14 9Z"
+                          class="style-scope yt-icon"
+                        ></path>
+                      </g>
+                    </svg>
+                  </div>
+                  <span class="video-info-button-text">SHARE</span>
+                </button>
+
+                <!-- save button -->
+                <button class="info-buttons" data-title="Save">
+                  <div class="info-icons-container">
+                    <svg
+                      class="info-icons"
+                      viewbox="0 0 24 24"
+                      preserveaspectratio="xMidYMid meet"
+                      focusable="false"
+                      style="
+                        pointer-events: none;
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                      "
+                    >
+                      <g class="style-scope yt-icon">
+                        <path
+                          d="M14 10H2v2h12v-2zm0-4H2v2h12V6zm4 8v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM2 16h8v-2H2v2z"
+                          class="style-scope yt-icon"
+                        ></path>
+                      </g>
+                    </svg>
+                  </div>
+                  <span class="video-info-button-text">SAVE</span>
+                </button>
+
+                <!-- more options button -->
+                <button class="info-buttons">
+                  <div class="info-icons-container">
+                    <svg
+                      class="info-icons"
+                      viewbox="0 0 24 24"
+                      preserveaspectratio="xMidYMid meet"
+                      focusable="false"
+                      style="
+                        pointer-events: none;
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                      "
+                    >
+                      <g class="style-scope yt-icon">
+                        <circle
+                          cx="5"
+                          cy="12"
+                          r="2"
+                          class="style-scope yt-icon"
+                        ></circle>
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="2"
+                          class="style-scope yt-icon"
+                        ></circle>
+                        <circle
+                          cx="19"
+                          cy="12"
+                          r="2"
+                          class="style-scope yt-icon"
+                        ></circle>
+                      </g>
+                    </svg>
+                  </div>
+                </button>
               </div>
             </div>
-            <div class="join-subscribe-buttons">
-              <button class="join-button">JOIN</button>
-              <button class="subscribe-button">SUBSCRIBE</button>
-            </div>
           </div>
 
-          <!-- comments -->
-          <a class="comments-preview-container" href="#comments">
-            <!-- left -->
-            <div class="comments-preview-left">
-              <span class="channel-name">Comments</span>
-              <span class="subscribers">662</span>
+          <!-- channel and comment preview containers -->
+          <div class="channel-and-comment-preview-contianers">
+            <!-- channel -->
+            <div class="channel-container">
+              <div class="channel-container-left">
+                <a
+                  href="https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><img
+                    class="channel-avi"
+                    src="/images/fccLogo.jpg"
+                    alt="fcc avi"
+                /></a>
+                <div class="channel-name-and-subs">
+                  <a
+                    href="https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="channel-name"
+                    >freeCodeCamp.org
+                    <!-- verified icon -->
+                    <div class="info-icons-container verified-container">
+                      <svg
+                        class="info-icons"
+                        viewbox="0 0 30 30 "
+                        preserveaspectratio="xMidYMid meet"
+                        focusable="false"
+                        style="
+                          pointer-events: none;
+                          display: block;
+                          width: 100%;
+                          height: 100%;
+                        "
+                      >
+                        <g class="style-scope yt-icon">
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10 S17.52,2,12,2z M9.92,17.93l-4.95-4.95l2.05-2.05l2.9,2.9l7.35-7.35l2.05,2.05L9.92,17.93z"
+                            class="style-scope yt-icon"
+                          ></path>
+                        </g>
+                      </svg>
+                    </div>
+                  </a>
+                  <span class="subscribers">3.82M subscribers</span>
+                </div>
+              </div>
+              <div class="join-subscribe-buttons">
+                <button class="join-button">JOIN</button>
+                <button class="subscribe-button">SUBSCRIBE</button>
+              </div>
             </div>
 
-            <!-- center -->
-            <div class="comments-preview-center">
-              <img class="user-avi-small" src="/images/comments-preview-avi.PNG" alt="">
-              <span class="comments-preview-comment">
-                Fantastic video! Thanks for all the great free content!!
-              </span>
-            </div>
+            <!-- comments -->
+            <a class="comments-preview-container" href="#comments">
+              <!-- left -->
+              <div class="comments-preview-left">
+                <span class="channel-name">Comments</span>
+                <span class="subscribers">662</span>
+              </div>
 
-            <!-- right -->
-            <div class="comments-preview-right">
+              <!-- center -->
+              <div class="comments-preview-center">
+                <img
+                  class="user-avi-small"
+                  src="/images/comments-preview-avi.png"
+                  alt=""
+                />
+                <span class="comments-preview-comment">
+                  Fantastic video! Thanks for all the great free content!!
+                </span>
+              </div>
+
+              <!-- right -->
+              <div class="comments-preview-right">
                 <!-- arrow icon -->
-              <div class="info-icons-container">
-                <svg class="info-icons" viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g mirror-in-rtl="" class="style-scope yt-icon"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" class="style-scope yt-icon"></path></g></svg>
+                <div class="info-icons-container">
+                  <svg
+                    class="info-icons"
+                    viewbox="0 0 24 24"
+                    preserveaspectratio="xMidYMid meet"
+                    focusable="false"
+                    style="
+                      pointer-events: none;
+                      display: block;
+                      width: 100%;
+                      height: 100%;
+                    "
+                  >
+                    <g mirror-in-rtl="" class="style-scope yt-icon">
+                      <path
+                        d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+                        class="style-scope yt-icon"
+                      ></path>
+                    </g>
+                  </svg>
+                </div>
               </div>
-            </div>
-          </a>
-          
+            </a>
+          </div>
         </div>
 
-      </div>
-
-      <!-- comments -->
-      <div id="comments"  class="comment-section-container">
-        
-        <!-- comments header container -->
-        <div class="comments-header-container">
-
-          <!-- header -->
-          <div class="comments-header">
-            <span class="comments-number">675 Comments</span>
-            <!-- sort by icon -->
-            <button class="info-buttons" data-title="Sort Comments">
-              <div class="info-icons-container">
-                <svg class="info-icons" viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M3 18h6v-2H3v2zM3 6v2h18V6H3zm0 7h12v-2H3v2z" class="style-scope yt-icon"></path><path d="M0 0h24v24H0z" fill="none" class="style-scope yt-icon"></path></g></svg>
+        <!-- comments -->
+        <div id="comments" class="comment-section-container">
+          <!-- comments header container -->
+          <div class="comments-header-container">
+            <!-- header -->
+            <div class="comments-header">
+              <span class="comments-number">675 Comments</span>
+              <!-- sort by icon -->
+              <button class="info-buttons" data-title="Sort Comments">
+                <div class="info-icons-container">
+                  <svg
+                    class="info-icons"
+                    viewbox="0 0 24 24"
+                    preserveaspectratio="xMidYMid meet"
+                    focusable="false"
+                    style="
+                      pointer-events: none;
+                      display: block;
+                      width: 100%;
+                      height: 100%;
+                    "
+                  >
+                    <g class="style-scope yt-icon">
+                      <path
+                        d="M3 18h6v-2H3v2zM3 6v2h18V6H3zm0 7h12v-2H3v2z"
+                        class="style-scope yt-icon"
+                      ></path>
+                      <path
+                        d="M0 0h24v24H0z"
+                        fill="none"
+                        class="style-scope yt-icon"
+                      ></path>
+                    </g>
+                  </svg>
                 </div>
-              <span class="video-info-button-text">SORT BY</span>
+                <span class="video-info-button-text">SORT BY</span>
+              </button>
+            </div>
+
+            <!-- add a comment container -->
+            <div class="add-comment-container">
+              <div class="add-comment-container-top">
+                <!-- user avi -->
+                <div class="google-avi-container">
+                  <img
+                    class="comment-avi"
+                    alt="Avatar image"
+                    src="https://yt3.ggpht.com/yti/APfAmoHPZkau3MYjICMRijp7WBVq0KMijDUGWG05BQ=s88-c-k-c0x00ffffff-no-rj-mo"
+                  />
+                </div>
+                <!-- comment input -->
+                <input
+                  class="comment-input"
+                  type="text"
+                  placeholder="Add a public comment..."
+                />
+
+                <div class="add-comment-container-buttons">
+                  <button class="comment-cancel-button">CANCEL</button>
+                  <button class="comment-submit-button">COMMENT</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- posted comments container -->
+          <div class="comments-container">
+            <!-- comment 1 -->
+            <div class="comment-container">
+              <!-- user avi -->
+              <a
+                class="google-avi-container"
+                href="https://github.com/KFig21"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  class="comment-avi"
+                  alt="Avatar image"
+                  src="/images/comments-preview-avi.png"
+                />
+              </a>
+
+              <!-- username, comment, and icons -->
+              <div class="comment-username-and-comment">
+                <!-- user and date -->
+                <a
+                  class="comment-username"
+                  href="https://github.com/KFig21"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >KFig21 <span class="date-posted">3 days ago</span></a
+                >
+
+                <!-- comment text -->
+                <span class="comment-text"
+                  >Fantastic video! Thanks for all the great free
+                  content!!</span
+                >
+
+                <!-- likes dislikes and reply button -->
+                <div class="comment-likes-and-reply">
+                  <!-- likes button -->
+                  <button class="info-buttons" data-title="Like">
+                    <div class="comment-icons-container">
+                      <svg
+                        class="info-icons"
+                        viewbox="0 0 24 24"
+                        preserveaspectratio="xMidYMid meet"
+                        focusable="false"
+                        style="
+                          pointer-events: none;
+                          display: block;
+                          width: 100%;
+                          height: 100%;
+                        "
+                      >
+                        <g class="style-scope yt-icon">
+                          <path
+                            d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1.91l-.01-.01L23 10z"
+                            class="style-scope yt-icon"
+                          ></path>
+                        </g>
+                      </svg>
+                    </div>
+                    <span class="video-comment-button-numbers">236</span>
+                  </button>
+
+                  <!-- dislikes button -->
+                  <button class="info-buttons" data-title="Dislike">
+                    <div class="comment-icons-container">
+                      <svg
+                        class="info-icons"
+                        viewbox="0 0 24 24"
+                        preserveaspectratio="xMidYMid meet"
+                        focusable="false"
+                        style="
+                          pointer-events: none;
+                          display: block;
+                          width: 100%;
+                          height: 100%;
+                        "
+                      >
+                        <g class="style-scope yt-icon">
+                          <path
+                            d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v1.91l.01.01L1 14c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z"
+                            class="style-scope yt-icon"
+                          ></path>
+                        </g>
+                      </svg>
+                    </div>
+                    <span class="video-comment-button-numbers"></span>
+                  </button>
+
+                  <!-- reply -->
+                  <button class="info-buttons">
+                    <span class="comment-reply">REPLY</span>
+                  </button>
+                </div>
+
+                <!-- replies -->
+                <div class="view-all-replies">
+                  <span class="view-hide-replies">
+                    <!-- downward arrow icon -->
+                    <button class="info-buttons">
+                      <div class="reply-icon-container">
+                        <svg
+                          class="reply-icon"
+                          viewbox="0 0 24 24"
+                          preserveaspectratio="xMidYMid meet"
+                          focusable="false"
+                          style="
+                            pointer-events: none;
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                          "
+                        >
+                          <g class="style-scope yt-icon">
+                            <path
+                              d="M7 10l5 5 5-5z"
+                              class="style-scope yt-icon"
+                            ></path>
+                          </g>
+                        </svg>
+                      </div>
+                    </button>
+                    View 19 replies</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- comment 2 -->
+            <div class="comment-container">
+              <!-- user avi -->
+              <div class="google-avi-container">
+                <img
+                  class="comment-avi"
+                  alt="Avatar image"
+                  src="/images/newbieCoder.jpg"
+                />
+              </div>
+
+              <!-- username, comment, and icons -->
+              <div class="comment-username-and-comment">
+                <!-- user and date -->
+                <span class="comment-username"
+                  >NewbieCoder
+                  <span class="date-posted">2 weeks ago</span></span
+                >
+
+                <!-- comment text -->
+                <span class="comment-text"
+                  >this is beautiful. i have been struggling with Js but you
+                  have opened my eyes to some of my problems. Thank you for
+                  making it free</span
+                >
+
+                <!-- likes dislikes and reply button -->
+                <div class="comment-likes-and-reply">
+                  <!-- likes button -->
+                  <button class="info-buttons" data-title="Like">
+                    <div class="comment-icons-container">
+                      <svg
+                        class="info-icons"
+                        viewbox="0 0 24 24"
+                        preserveaspectratio="xMidYMid meet"
+                        focusable="false"
+                        style="
+                          pointer-events: none;
+                          display: block;
+                          width: 100%;
+                          height: 100%;
+                        "
+                      >
+                        <g class="style-scope yt-icon">
+                          <path
+                            d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1.91l-.01-.01L23 10z"
+                            class="style-scope yt-icon"
+                          ></path>
+                        </g>
+                      </svg>
+                    </div>
+                    <span class="video-comment-button-numbers">418</span>
+                  </button>
+
+                  <!-- dislikes button -->
+                  <button class="info-buttons" data-title="Dislike">
+                    <div class="comment-icons-container">
+                      <svg
+                        class="info-icons"
+                        viewbox="0 0 24 24"
+                        preserveaspectratio="xMidYMid meet"
+                        focusable="false"
+                        style="
+                          pointer-events: none;
+                          display: block;
+                          width: 100%;
+                          height: 100%;
+                        "
+                      >
+                        <g class="style-scope yt-icon">
+                          <path
+                            d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v1.91l.01.01L1 14c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z"
+                            class="style-scope yt-icon"
+                          ></path>
+                        </g>
+                      </svg>
+                    </div>
+                    <span class="video-comment-button-numbers"></span>
+                  </button>
+
+                  <!-- reply -->
+                  <button class="info-buttons">
+                    <span class="comment-reply">REPLY</span>
+                  </button>
+                </div>
+
+                <!-- replies -->
+                <div class="view-all-replies">
+                  <span class="view-hide-replies">
+                    <!-- downward arrow icon -->
+                    <button class="info-buttons">
+                      <div class="reply-icon-container">
+                        <svg
+                          class="reply-icon"
+                          viewbox="0 0 24 24"
+                          preserveaspectratio="xMidYMid meet"
+                          focusable="false"
+                          style="
+                            pointer-events: none;
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                          "
+                        >
+                          <g class="style-scope yt-icon">
+                            <path
+                              d="M7 10l5 5 5-5z"
+                              class="style-scope yt-icon"
+                            ></path>
+                          </g>
+                        </svg>
+                      </div>
+                    </button>
+                    View 12 replies</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- comment 3 -->
+            <div class="comment-container">
+              <!-- user avi -->
+              <div class="google-avi-container">
+                <img
+                  class="comment-avi"
+                  alt="Avatar image"
+                  src="https://yt3.ggpht.com/ytc/AKedOLQ8_dZJUh2kfUbIuNWFQjmQ2Pehf3wSKWurJg=s88-c-k-c0x00ffffff-no-rj"
+                />
+              </div>
+
+              <!-- username, comment, and icons -->
+              <div class="comment-username-and-comment">
+                <!-- user and date -->
+                <span class="comment-username"
+                  >JustAnotherCommenter
+                  <span class="date-posted">1 month ago</span></span
+                >
+
+                <!-- comment text -->
+                <span class="comment-text"
+                  >I've been banging my head against the wall for days with
+                  similar projects and John types it out so casual in 20 minutes
+                  or less... Learning a lot here. Thank you!</span
+                >
+
+                <!-- likes dislikes and reply button -->
+                <div class="comment-likes-and-reply">
+                  <!-- likes button -->
+                  <button class="info-buttons" data-title="Like">
+                    <div class="comment-icons-container">
+                      <svg
+                        class="info-icons"
+                        viewbox="0 0 24 24"
+                        preserveaspectratio="xMidYMid meet"
+                        focusable="false"
+                        style="
+                          pointer-events: none;
+                          display: block;
+                          width: 100%;
+                          height: 100%;
+                        "
+                      >
+                        <g class="style-scope yt-icon">
+                          <path
+                            d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1.91l-.01-.01L23 10z"
+                            class="style-scope yt-icon"
+                          ></path>
+                        </g>
+                      </svg>
+                    </div>
+                    <span class="video-comment-button-numbers">23</span>
+                  </button>
+
+                  <!-- dislikes button -->
+                  <button class="info-buttons" data-title="Dislike">
+                    <div class="comment-icons-container">
+                      <svg
+                        class="info-icons"
+                        viewbox="0 0 24 24"
+                        preserveaspectratio="xMidYMid meet"
+                        focusable="false"
+                        style="
+                          pointer-events: none;
+                          display: block;
+                          width: 100%;
+                          height: 100%;
+                        "
+                      >
+                        <g class="style-scope yt-icon">
+                          <path
+                            d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v1.91l.01.01L1 14c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z"
+                            class="style-scope yt-icon"
+                          ></path>
+                        </g>
+                      </svg>
+                    </div>
+                    <span class="video-comment-button-numbers"></span>
+                  </button>
+
+                  <!-- reply -->
+                  <button class="info-buttons">
+                    <span class="comment-reply">REPLY</span>
+                  </button>
+                </div>
+
+                <!-- replies -->
+                <div class="view-all-replies">
+                  <span class="view-hide-replies">
+                    <!-- downward arrow icon -->
+                    <button class="info-buttons">
+                      <div class="reply-icon-container">
+                        <svg
+                          class="reply-icon"
+                          viewbox="0 0 24 24"
+                          preserveaspectratio="xMidYMid meet"
+                          focusable="false"
+                          style="
+                            pointer-events: none;
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                          "
+                        >
+                          <g class="style-scope yt-icon">
+                            <path
+                              d="M7 10l5 5 5-5z"
+                              class="style-scope yt-icon"
+                            ></path>
+                          </g>
+                        </svg>
+                      </div>
+                    </button>
+                    View reply</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- video suggestions -->
+      <aside>
+        <!-- suggestion buttons -->
+        <div class="suggestions-container">
+          <div class="suggestion-buttons">
+            <input
+              class="suggestions-radio"
+              type="radio"
+              id="radio1"
+              name="suggestions-radio"
+              checked
+            />
+            <label class="radio-label" for="radio1">All</label>
+          </div>
+          <div class="suggestion-buttons">
+            <input
+              class="suggestions-radio"
+              type="radio"
+              id="radio2"
+              name="suggestions-radio"
+            />
+            <label class="radio-label" for="radio2">HTML</label>
+          </div>
+          <div class="suggestion-buttons">
+            <input
+              class="suggestions-radio"
+              type="radio"
+              id="radio3"
+              name="suggestions-radio"
+            />
+            <label class="radio-label" for="radio3">JavaScript</label>
+          </div>
+          <div class="suggestion-buttons">
+            <input
+              class="suggestions-radio"
+              type="radio"
+              id="radio4"
+              name="suggestions-radio"
+            />
+            <label class="radio-label" for="radio4">React</label>
+          </div>
+          <div class="suggestion-buttons">
+            <input
+              class="suggestions-radio"
+              type="radio"
+              id="radio5"
+              name="suggestions-radio"
+            />
+            <label class="radio-label" for="radio5">Python</label>
+          </div>
+        </div>
+
+        <!-- suggested videos -->
+        <div class="suggested-videos-container">
+          <!-- suggested video 1 -->
+          <div class="suggested-video-container">
+            <!-- video preview -->
+            <div class="suggested-video-container-preview">
+              <!-- runtime -->
+              <div class="suggested-video-runtime">3:54:03</div>
+
+              <!-- suggested watch later -->
+              <div class="suggested-watch-later">
+                <svg
+                  viewbox="0 0 24 24"
+                  preserveaspectratio="xMidYMid meet"
+                  focusable="false"
+                  class="watch-later-icon"
+                  style="
+                    pointer-events: none;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <g class="style-scope yt-icon">
+                    <path
+                      d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z"
+                      class="style-scope yt-icon"
+                    ></path>
+                  </g>
+                </svg>
+                <span class="icon-title">Watch Later</span>
+              </div>
+
+              <!-- suggested add to queue -->
+              <div class="suggested-add-to-queue">
+                <svg
+                  viewbox="0 0 24 24"
+                  preserveaspectratio="xMidYMid meet"
+                  focusable="false"
+                  class="watch-later-icon"
+                  style="
+                    pointer-events: none;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <g class="style-scope yt-icon">
+                    <path
+                      d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z"
+                      class="style-scope yt-icon"
+                    ></path>
+                  </g>
+                </svg>
+                <span class="icon-title">Add to Queue</span>
+              </div>
+
+              <!-- preview image -->
+              <a
+                href="https://www.youtube.com/watch?v=vQWlgd7hV4A&ab_channel=DevEd"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  class="video-preview-image"
+                  src="https://i.ytimg.com/vi/vQWlgd7hV4A/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBqAuOYo_EAq9_KQEltcI4J5AgFCA"
+                  alt=""
+                />
+              </a>
+            </div>
+
+            <!-- video info -->
+            <div class="suggested-video-container-info">
+              <!-- video title -->
+              <a
+                href="https://www.youtube.com/watch?v=vQWlgd7hV4A&ab_channel=DevEd"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="suggested-video-title"
+                  >Learn HTML5 and CSS3 For Beginners - Crash Course</span
+                ></a
+              >
+
+              <!-- video channel -->
+              <a
+                href="https://www.youtube.com/channel/UClb90NQQcskPUGDIXsQEz5Q"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="suggested-video-channel"
+                  >Dev Ed
+                  <!-- verified icon -->
+                  <div
+                    class="info-icons-container suggested-verified-container"
+                  >
+                    <svg
+                      class="info-icons"
+                      viewbox="0 0 30 30 "
+                      preserveaspectratio="xMidYMid meet"
+                      focusable="false"
+                      style="
+                        pointer-events: none;
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                      "
+                    >
+                      <g class="style-scope yt-icon">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10 S17.52,2,12,2z M9.92,17.93l-4.95-4.95l2.05-2.05l2.9,2.9l7.35-7.35l2.05,2.05L9.92,17.93z"
+                          class="style-scope yt-icon"
+                        ></path>
+                      </g>
+                    </svg>
+                  </div> </span
+              ></a>
+              <a
+                href="https://www.youtube.com/watch?v=vQWlgd7hV4A&ab_channel=DevEd"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="suggested-video-channel"
+                  >805K views • 1 year ago</span
+                ></a
+              >
+            </div>
+
+            <!-- options icon -->
+            <button class="options-button">
+              <div class="options-icon-container">
+                <svg
+                  class="options-icons"
+                  viewbox="0 0 24 24"
+                  preserveaspectratio="xMidYMid meet"
+                  focusable="false"
+                  style="
+                    pointer-events: none;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <g class="style-scope yt-icon">
+                    <path
+                      d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                      class="style-scope yt-icon"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
             </button>
           </div>
 
-          <!-- add a comment container -->
-          <div class="add-comment-container">
-            
-            <div class="add-comment-container-top">
-              <!-- user avi -->
-              <div class="google-avi-container">
-                <img class="comment-avi" alt="Avatar image" src="https://yt3.ggpht.com/yti/APfAmoHPZkau3MYjICMRijp7WBVq0KMijDUGWG05BQ=s88-c-k-c0x00ffffff-no-rj-mo">
-              </div>
-              <!-- comment input -->
-              <input class="comment-input" type="text" placeholder="Add a public comment...">
+          <!-- suggested video 2 -->
+          <div class="suggested-video-container">
+            <!-- video preview -->
+            <div class="suggested-video-container-preview">
+              <!-- runtime -->
+              <div class="suggested-video-runtime">24:00</div>
 
-              <div class="add-comment-container-buttons">
-                <button class="comment-cancel-button">CANCEL</button>
-                <button class="comment-submit-button">COMMENT</button>
+              <!-- suggested watch later -->
+              <div class="suggested-watch-later">
+                <svg
+                  viewbox="0 0 24 24"
+                  preserveaspectratio="xMidYMid meet"
+                  focusable="false"
+                  class="watch-later-icon"
+                  style="
+                    pointer-events: none;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <g class="style-scope yt-icon">
+                    <path
+                      d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z"
+                      class="style-scope yt-icon"
+                    ></path>
+                  </g>
+                </svg>
+                <span class="icon-title">Watch Later</span>
               </div>
+
+              <!-- suggested add to queue -->
+              <div class="suggested-add-to-queue">
+                <svg
+                  viewbox="0 0 24 24"
+                  preserveaspectratio="xMidYMid meet"
+                  focusable="false"
+                  class="watch-later-icon"
+                  style="
+                    pointer-events: none;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <g class="style-scope yt-icon">
+                    <path
+                      d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z"
+                      class="style-scope yt-icon"
+                    ></path>
+                  </g>
+                </svg>
+                <span class="icon-title">Add to Queue</span>
+              </div>
+
+              <!-- preview image -->
+              <a
+                href="https://www.youtube.com/watch?v=568g8hxJJp4&ab_channel=FunFunFunction"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  class="video-preview-image"
+                  src="https://i.ytimg.com/vi/568g8hxJJp4/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAeAXzEYCVOUnjwNGWOjs8PDFQ2_w"
+                  alt=""
+                />
+              </a>
             </div>
 
-          </div>
-        </div>
+            <!-- video info -->
+            <div class="suggested-video-container-info">
+              <!-- video title -->
+              <a
+                href="https://www.youtube.com/watch?v=568g8hxJJp4&ab_channel=FunFunFunction"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="suggested-video-title"
+                  >async / await in JavaScript - What, Why and How - Fun Fun
+                  Function</span
+                ></a
+              >
 
-        <!-- posted comments container -->
-        <div class="comments-container">
-
-          <!-- comment 1 -->
-          <div class="comment-container">
-            <!-- user avi -->
-            <a class="google-avi-container" href="https://github.com/KFig21" target="_blank" rel="noopener noreferrer">
-              <img class="comment-avi" alt="Avatar image" src="/images/comments-preview-avi.PNG">
-            </a>
-
-            <!-- username, comment, and icons -->
-            <div class="comment-username-and-comment">
-
-              <!-- user and date -->
-              <a class="comment-username"  href="https://github.com/KFig21" target="_blank" rel="noopener noreferrer">KFig21 <span class="date-posted">3 days ago</span></a>
-
-              <!-- comment text -->
-              <span class="comment-text">Fantastic video! Thanks for all the great free content!!</span>
-
-              <!-- likes dislikes and reply button -->
-              <div class="comment-likes-and-reply">
-                
-                <!-- likes button -->
-                <button class="info-buttons" data-title="Like">
-                  <div class="comment-icons-container">
-                    <svg class="info-icons" viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1.91l-.01-.01L23 10z" class="style-scope yt-icon"></path></g></svg>
-                  </div>
-                  <span class="video-comment-button-numbers">236</span>
-                </button>
-                
-                <!-- dislikes button -->
-                <button class="info-buttons" data-title="Dislike">
-                  <div class="comment-icons-container">
-                    <svg class="info-icons" viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v1.91l.01.01L1 14c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" class="style-scope yt-icon"></path></g></svg>
-                  </div>
-                  <span class="video-comment-button-numbers"></span>
-                </button>
-
-                <!-- reply -->
-                <button class="info-buttons">
-                  <span class="comment-reply">REPLY</span>
-                </button>
-
-              </div>
-
-              <!-- replies -->
-              <div class="view-all-replies">
-                <span class="view-hide-replies">
-                  <!-- downward arrow icon -->
-                  <button class="info-buttons">
-                    <div class="reply-icon-container">
-                      <svg class="reply-icon" viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M7 10l5 5 5-5z" class="style-scope yt-icon"></path></g></svg>
-                    </div>
-                  </button>
-                  View 19 replies</span>
-              </div>
+              <!-- video channel -->
+              <a
+                href="https://www.youtube.com/channel/UCO1cgjhGzsSYb1rsB4bFe4Q"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="suggested-video-channel"
+                  >Fun Fun Function
+                  <!-- verified icon -->
+                  <div
+                    class="info-icons-container suggested-verified-container"
+                  >
+                    <svg
+                      class="info-icons"
+                      viewbox="0 0 30 30 "
+                      preserveaspectratio="xMidYMid meet"
+                      focusable="false"
+                      style="
+                        pointer-events: none;
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                      "
+                    >
+                      <g class="style-scope yt-icon">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10 S17.52,2,12,2z M9.92,17.93l-4.95-4.95l2.05-2.05l2.9,2.9l7.35-7.35l2.05,2.05L9.92,17.93z"
+                          class="style-scope yt-icon"
+                        ></path>
+                      </g>
+                    </svg>
+                  </div> </span
+              ></a>
+              <a
+                href="https://www.youtube.com/watch?v=568g8hxJJp4&ab_channel=FunFunFunction"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="suggested-video-channel"
+                  >232K views • 3 years ago</span
+                ></a
+              >
             </div>
 
-          </div>
-
-          <!-- comment 2 -->
-          <div class="comment-container">
-            <!-- user avi -->
-            <div class="google-avi-container">
-              <img class="comment-avi" alt="Avatar image" src="/images/newbieCoder.JPG">
-            </div>
-
-            <!-- username, comment, and icons -->
-            <div class="comment-username-and-comment">
-
-              <!-- user and date -->
-              <span class="comment-username">NewbieCoder <span class="date-posted">2 weeks ago</span></span>
-
-              <!-- comment text -->
-              <span class="comment-text">this is beautiful. i have been struggling with Js but you have opened my eyes to some of my problems. Thank you for making it free</span>
-
-              <!-- likes dislikes and reply button -->
-              <div class="comment-likes-and-reply">
-                
-                <!-- likes button -->
-                <button class="info-buttons" data-title="Like">
-                  <div class="comment-icons-container">
-                    <svg class="info-icons" viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1.91l-.01-.01L23 10z" class="style-scope yt-icon"></path></g></svg>
-                  </div>
-                  <span class="video-comment-button-numbers">418</span>
-                </button>
-                
-                <!-- dislikes button -->
-                <button class="info-buttons" data-title="Dislike">
-                  <div class="comment-icons-container">
-                    <svg class="info-icons" viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v1.91l.01.01L1 14c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" class="style-scope yt-icon"></path></g></svg>
-                  </div>
-                  <span class="video-comment-button-numbers"></span>
-                </button>
-
-                <!-- reply -->
-                <button class="info-buttons">
-                  <span class="comment-reply">REPLY</span>
-                </button>
-
+            <!-- options icon -->
+            <button class="options-button">
+              <div class="options-icon-container">
+                <svg
+                  class="options-icons"
+                  viewbox="0 0 24 24"
+                  preserveaspectratio="xMidYMid meet"
+                  focusable="false"
+                  style="
+                    pointer-events: none;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <g class="style-scope yt-icon">
+                    <path
+                      d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                      class="style-scope yt-icon"
+                    ></path>
+                  </g>
+                </svg>
               </div>
-
-              <!-- replies -->
-              <div class="view-all-replies">
-                <span class="view-hide-replies">
-                  <!-- downward arrow icon -->
-                  <button class="info-buttons">
-                    <div class="reply-icon-container">
-                      <svg class="reply-icon" viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M7 10l5 5 5-5z" class="style-scope yt-icon"></path></g></svg>
-                    </div>
-                  </button>
-                  View 12 replies</span>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- comment 3 -->
-          <div class="comment-container">
-            <!-- user avi -->
-            <div class="google-avi-container">
-              <img class="comment-avi" alt="Avatar image" src="https://yt3.ggpht.com/ytc/AKedOLQ8_dZJUh2kfUbIuNWFQjmQ2Pehf3wSKWurJg=s88-c-k-c0x00ffffff-no-rj">
-            </div>
-
-            <!-- username, comment, and icons -->
-            <div class="comment-username-and-comment">
-
-              <!-- user and date -->
-              <span class="comment-username">JustAnotherCommenter <span class="date-posted">1 month ago</span></span>
-
-              <!-- comment text -->
-              <span class="comment-text">I've been banging my head against the wall for days with similar projects and John types it out so casual in 20 minutes or less... Learning a lot here. Thank you!</span>
-
-              <!-- likes dislikes and reply button -->
-              <div class="comment-likes-and-reply">
-                
-                <!-- likes button -->
-                <button class="info-buttons" data-title="Like">
-                  <div class="comment-icons-container">
-                    <svg class="info-icons" viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1.91l-.01-.01L23 10z" class="style-scope yt-icon"></path></g></svg>
-                  </div>
-                  <span class="video-comment-button-numbers">23</span>
-                </button>
-                
-                <!-- dislikes button -->
-                <button class="info-buttons" data-title="Dislike">
-                  <div class="comment-icons-container">
-                    <svg class="info-icons" viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v1.91l.01.01L1 14c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" class="style-scope yt-icon"></path></g></svg>
-                  </div>
-                  <span class="video-comment-button-numbers"></span>
-                </button>
-
-                <!-- reply -->
-                <button class="info-buttons">
-                  <span class="comment-reply">REPLY</span>
-                </button>
-
-              </div>
-
-              <!-- replies -->
-              <div class="view-all-replies">
-                <span class="view-hide-replies">
-                  <!-- downward arrow icon -->
-                  <button class="info-buttons">
-                    <div class="reply-icon-container">
-                      <svg class="reply-icon" viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M7 10l5 5 5-5z" class="style-scope yt-icon"></path></g></svg>
-                    </div>
-                  </button>
-                  View reply</span>
-              </div>
-            </div>
-
+            </button>
           </div>
 
-        </div>
-      </div>
+          <!-- suggested video 3 -->
+          <div class="suggested-video-container">
+            <!-- video preview -->
+            <div class="suggested-video-container-preview">
+              <!-- runtime -->
+              <div class="suggested-video-runtime">13:59</div>
 
-    </main>
-
-    <!-- video suggestions -->
-    <aside>
-
-      <!-- suggestion buttons -->
-      <div class="suggestions-container">
-        <div class="suggestion-buttons">
-          <input class="suggestions-radio" type="radio" id="radio1" name="suggestions-radio" checked>
-          <label class="radio-label" for="radio1">All</label>
-        </div>
-        <div class="suggestion-buttons">
-          <input class="suggestions-radio" type="radio" id="radio2" name="suggestions-radio">
-          <label class="radio-label" for="radio2">HTML</label>
-        </div>
-        <div class="suggestion-buttons">
-          <input class="suggestions-radio" type="radio" id="radio3" name="suggestions-radio">
-          <label class="radio-label" for="radio3">JavaScript</label>
-        </div>
-        <div class="suggestion-buttons">
-          <input class="suggestions-radio" type="radio" id="radio4" name="suggestions-radio">
-          <label class="radio-label" for="radio4">React</label>
-        </div>
-        <div class="suggestion-buttons">
-          <input class="suggestions-radio" type="radio" id="radio5" name="suggestions-radio">
-          <label class="radio-label" for="radio5">Python</label>
-        </div>
-      </div>
-
-      <!-- suggested videos -->
-      <div class="suggested-videos-container">
-
-        <!-- suggested video 1 -->
-        <div class="suggested-video-container">
-
-          <!-- video preview -->
-          <div class="suggested-video-container-preview">
-
-            <!-- runtime -->
-            <div class="suggested-video-runtime">3:54:03</div>
-
-            <!-- suggested watch later -->
-            <div class="suggested-watch-later">
-              <svg viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" class="watch-later-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z" class="style-scope yt-icon"></path></g></svg>
-              <span class="icon-title">Watch Later</span>
-            </div>
-
-            <!-- suggested add to queue -->
-            <div class="suggested-add-to-queue">
-              <svg viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" class="watch-later-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z" class="style-scope yt-icon"></path></g></svg>
-              <span class="icon-title">Add to Queue</span>
-            </div>
-
-            <!-- preview image -->
-            <a href="https://www.youtube.com/watch?v=vQWlgd7hV4A&ab_channel=DevEd" target="_blank" rel="noopener noreferrer">
-              <img class="video-preview-image" src="https://i.ytimg.com/vi/vQWlgd7hV4A/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBqAuOYo_EAq9_KQEltcI4J5AgFCA" alt="">
-            </a>
-          </div>
-
-          <!-- video info -->
-          <div class="suggested-video-container-info">
-            <!-- video title -->
-            <a href="https://www.youtube.com/watch?v=vQWlgd7hV4A&ab_channel=DevEd" target="_blank" rel="noopener noreferrer">
-            <span class="suggested-video-title">Learn HTML5 and CSS3 For Beginners - Crash Course</span></a>
-
-            <!-- video channel -->
-            <a href="https://www.youtube.com/channel/UClb90NQQcskPUGDIXsQEz5Q" target="_blank" rel="noopener noreferrer">
-            <span class="suggested-video-channel">Dev Ed
-              <!-- verified icon -->
-              <div class="info-icons-container suggested-verified-container">
-                <svg class="info-icons" viewbox="0 0 30 30 " preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10 S17.52,2,12,2z M9.92,17.93l-4.95-4.95l2.05-2.05l2.9,2.9l7.35-7.35l2.05,2.05L9.92,17.93z" class="style-scope yt-icon"></path></g></svg>
+              <!-- suggested watch later -->
+              <div class="suggested-watch-later">
+                <svg
+                  viewbox="0 0 24 24"
+                  preserveaspectratio="xMidYMid meet"
+                  focusable="false"
+                  class="watch-later-icon"
+                  style="
+                    pointer-events: none;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <g class="style-scope yt-icon">
+                    <path
+                      d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z"
+                      class="style-scope yt-icon"
+                    ></path>
+                  </g>
+                </svg>
+                <span class="icon-title">Watch Later</span>
               </div>
-            </span></a>
-            <a href="https://www.youtube.com/watch?v=vQWlgd7hV4A&ab_channel=DevEd" target="_blank" rel="noopener noreferrer">
-            <span class="suggested-video-channel">805K views • 1 year ago</span></a>
-          </div>
 
-          <!-- options icon -->
-          <button class="options-button">
-            <div class="options-icon-container">
-              <svg class="options-icons" viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" class="style-scope yt-icon"></path></g></svg>
+              <!-- suggested add to queue -->
+              <div class="suggested-add-to-queue">
+                <svg
+                  viewbox="0 0 24 24"
+                  preserveaspectratio="xMidYMid meet"
+                  focusable="false"
+                  class="watch-later-icon"
+                  style="
+                    pointer-events: none;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <g class="style-scope yt-icon">
+                    <path
+                      d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z"
+                      class="style-scope yt-icon"
+                    ></path>
+                  </g>
+                </svg>
+                <span class="icon-title">Add to Queue</span>
               </div>
-          </button>
-        </div>
-       
-        <!-- suggested video 2 -->
-        <div class="suggested-video-container">
 
-          <!-- video preview -->
-          <div class="suggested-video-container-preview">
-
-            <!-- runtime -->
-            <div class="suggested-video-runtime">24:00</div>
-
-            <!-- suggested watch later -->
-            <div class="suggested-watch-later">
-              <svg viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" class="watch-later-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z" class="style-scope yt-icon"></path></g></svg>
-              <span class="icon-title">Watch Later</span>
+              <!-- preview image -->
+              <a
+                href="https://www.youtube.com/watch?v=JFrOBni6_BI&t=397s&ab_channel=MikeDane"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  class="video-preview-image"
+                  src="https://i.ytimg.com/vi/JFrOBni6_BI/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAEzqsaRJQDxuBBlOID9dv02_g90g"
+                  alt=""
+                />
+              </a>
             </div>
 
-            <!-- suggested add to queue -->
-            <div class="suggested-add-to-queue">
-              <svg viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" class="watch-later-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z" class="style-scope yt-icon"></path></g></svg>
-              <span class="icon-title">Add to Queue</span>
-            </div>
+            <!-- video info -->
+            <div class="suggested-video-container-info">
+              <!-- video title -->
+              <a
+                href="https://www.youtube.com/watch?v=JFrOBni6_BI&t=397s&ab_channel=MikeDane"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="suggested-video-title"
+                  >Dev Simulator - A Coding RPG & Bootcamp
+                  (www.simulator.dev)</span
+                ></a
+              >
 
-            <!-- preview image -->
-            <a href="https://www.youtube.com/watch?v=568g8hxJJp4&ab_channel=FunFunFunction" target="_blank" rel="noopener noreferrer">
-              <img class="video-preview-image" src="https://i.ytimg.com/vi/568g8hxJJp4/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAeAXzEYCVOUnjwNGWOjs8PDFQ2_w" alt="">
-            </a>
-          </div>
-
-          <!-- video info -->
-          <div class="suggested-video-container-info">
-            <!-- video title -->
-            <a href="https://www.youtube.com/watch?v=568g8hxJJp4&ab_channel=FunFunFunction" target="_blank" rel="noopener noreferrer">
-            <span class="suggested-video-title">async / await in JavaScript - What, Why and How - Fun Fun Function</span></a>
-
-            <!-- video channel -->
-            <a href="https://www.youtube.com/channel/UCO1cgjhGzsSYb1rsB4bFe4Q" target="_blank" rel="noopener noreferrer">
-            <span class="suggested-video-channel">Fun Fun Function
-              <!-- verified icon -->
-              <div class="info-icons-container suggested-verified-container">
-                <svg class="info-icons" viewbox="0 0 30 30 " preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10 S17.52,2,12,2z M9.92,17.93l-4.95-4.95l2.05-2.05l2.9,2.9l7.35-7.35l2.05,2.05L9.92,17.93z" class="style-scope yt-icon"></path></g></svg>
-              </div>
-            </span></a>
-            <a href="https://www.youtube.com/watch?v=568g8hxJJp4&ab_channel=FunFunFunction" target="_blank" rel="noopener noreferrer">
-            <span class="suggested-video-channel">232K views • 3 years ago</span></a>
-          </div>
-
-          <!-- options icon -->
-          <button class="options-button">
-            <div class="options-icon-container">
-              <svg class="options-icons" viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" class="style-scope yt-icon"></path></g></svg>
-              </div>
-          </button>
-        </div>
-
-        <!-- suggested video 3 -->
-        <div class="suggested-video-container">
-
-          <!-- video preview -->
-          <div class="suggested-video-container-preview">
-
-            <!-- runtime -->
-            <div class="suggested-video-runtime">13:59</div>
-
-            <!-- suggested watch later -->
-            <div class="suggested-watch-later">
-              <svg viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" class="watch-later-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z" class="style-scope yt-icon"></path></g></svg>
-              <span class="icon-title">Watch Later</span>
-            </div>
-
-            <!-- suggested add to queue -->
-            <div class="suggested-add-to-queue">
-              <svg viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" class="watch-later-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z" class="style-scope yt-icon"></path></g></svg>
-              <span class="icon-title">Add to Queue</span>
-            </div>
-
-            <!-- preview image -->
-            <a href="https://www.youtube.com/watch?v=JFrOBni6_BI&t=397s&ab_channel=MikeDane" target="_blank" rel="noopener noreferrer">
-              <img class="video-preview-image" src="https://i.ytimg.com/vi/JFrOBni6_BI/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAEzqsaRJQDxuBBlOID9dv02_g90g" alt="">
-            </a>
-          </div>
-
-          <!-- video info -->
-          <div class="suggested-video-container-info">
-            <!-- video title -->
-            <a href="https://www.youtube.com/watch?v=JFrOBni6_BI&t=397s&ab_channel=MikeDane" target="_blank" rel="noopener noreferrer">
-            <span class="suggested-video-title">Dev Simulator - A Coding RPG & Bootcamp (www.simulator.dev)</span></a>
-
-            <!-- video channel -->
-            <a href="https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ" target="_blank" rel="noopener noreferrer">
-            <span class="suggested-video-channel">Mike Dane
-              <!-- verified icon -->
-              <!-- <div class="info-icons-container suggested-verified-container">
+              <!-- video channel -->
+              <a
+                href="https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="suggested-video-channel"
+                  >Mike Dane
+                  <!-- verified icon -->
+                  <!-- <div class="info-icons-container suggested-verified-container">
                 <svg class="info-icons" viewbox="0 0 30 30 " preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10 S17.52,2,12,2z M9.92,17.93l-4.95-4.95l2.05-2.05l2.9,2.9l7.35-7.35l2.05,2.05L9.92,17.93z" class="style-scope yt-icon"></path></g></svg>
               </div> -->
-            </span></a>
-            <a href="https://www.youtube.com/watch?v=JFrOBni6_BI&t=397s&ab_channel=MikeDane" target="_blank" rel="noopener noreferrer">
-            <span class="suggested-video-channel">22K views • 4 months ago</span></a>
-          </div>
+                </span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=JFrOBni6_BI&t=397s&ab_channel=MikeDane"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="suggested-video-channel"
+                  >22K views • 4 months ago</span
+                ></a
+              >
+            </div>
 
-          <!-- options icon -->
-          <button class="options-button">
-            <div class="options-icon-container">
-              <svg class="options-icons" viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" class="style-scope yt-icon"></path></g></svg>
+            <!-- options icon -->
+            <button class="options-button">
+              <div class="options-icon-container">
+                <svg
+                  class="options-icons"
+                  viewbox="0 0 24 24"
+                  preserveaspectratio="xMidYMid meet"
+                  focusable="false"
+                  style="
+                    pointer-events: none;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <g class="style-scope yt-icon">
+                    <path
+                      d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                      class="style-scope yt-icon"
+                    ></path>
+                  </g>
+                </svg>
               </div>
-          </button>
-        </div>
-       
-        <!-- suggested video 4 -->
-        <div class="suggested-video-container">
-
-          <!-- video preview -->
-          <div class="suggested-video-container-preview">
-
-            <!-- runtime -->
-            <div class="suggested-video-runtime">22:03</div>
-
-            <!-- suggested watch later -->
-            <div class="suggested-watch-later">
-              <svg viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" class="watch-later-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z" class="style-scope yt-icon"></path></g></svg>
-              <span class="icon-title">Watch Later</span>
-            </div>
-
-            <!-- suggested add to queue -->
-            <div class="suggested-add-to-queue">
-              <svg viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" class="watch-later-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z" class="style-scope yt-icon"></path></g></svg>
-              <span class="icon-title">Add to Queue</span>
-            </div>
-
-            <!-- preview image -->
-            <a href="https://www.youtube.com/watch?v=0NFwF7L-YA8&ab_channel=SimplifiedCoding" target="_blank" rel="noopener noreferrer">
-              <img class="video-preview-image" src="https://i.ytimg.com/vi/0NFwF7L-YA8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDiUvS_ZKwOD-9eHZ4L-OU_Pmd4oQ" alt="">
-            </a>
+            </button>
           </div>
 
-          <!-- video info -->
-          <div class="suggested-video-container-info">
-            <!-- video title -->
-            <a href="https://www.youtube.com/watch?v=0NFwF7L-YA8&ab_channel=SimplifiedCoding" target="_blank" rel="noopener noreferrer">
-            <span class="suggested-video-title">Firebase Android Tutorial - Part 1 - User Registration</span></a>
+          <!-- suggested video 4 -->
+          <div class="suggested-video-container">
+            <!-- video preview -->
+            <div class="suggested-video-container-preview">
+              <!-- runtime -->
+              <div class="suggested-video-runtime">22:03</div>
 
-            <!-- video channel -->
-            <a href="https://www.youtube.com/channel/UC9YTuDeKzDoyOphWHtdK0jA" target="_blank" rel="noopener noreferrer">
-            <span class="suggested-video-channel">Simplified Coding
-              <!-- verified icon -->
-              <!-- <div class="info-icons-container suggested-verified-container">
+              <!-- suggested watch later -->
+              <div class="suggested-watch-later">
+                <svg
+                  viewbox="0 0 24 24"
+                  preserveaspectratio="xMidYMid meet"
+                  focusable="false"
+                  class="watch-later-icon"
+                  style="
+                    pointer-events: none;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <g class="style-scope yt-icon">
+                    <path
+                      d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z"
+                      class="style-scope yt-icon"
+                    ></path>
+                  </g>
+                </svg>
+                <span class="icon-title">Watch Later</span>
+              </div>
+
+              <!-- suggested add to queue -->
+              <div class="suggested-add-to-queue">
+                <svg
+                  viewbox="0 0 24 24"
+                  preserveaspectratio="xMidYMid meet"
+                  focusable="false"
+                  class="watch-later-icon"
+                  style="
+                    pointer-events: none;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <g class="style-scope yt-icon">
+                    <path
+                      d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z"
+                      class="style-scope yt-icon"
+                    ></path>
+                  </g>
+                </svg>
+                <span class="icon-title">Add to Queue</span>
+              </div>
+
+              <!-- preview image -->
+              <a
+                href="https://www.youtube.com/watch?v=0NFwF7L-YA8&ab_channel=SimplifiedCoding"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  class="video-preview-image"
+                  src="https://i.ytimg.com/vi/0NFwF7L-YA8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDiUvS_ZKwOD-9eHZ4L-OU_Pmd4oQ"
+                  alt=""
+                />
+              </a>
+            </div>
+
+            <!-- video info -->
+            <div class="suggested-video-container-info">
+              <!-- video title -->
+              <a
+                href="https://www.youtube.com/watch?v=0NFwF7L-YA8&ab_channel=SimplifiedCoding"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="suggested-video-title"
+                  >Firebase Android Tutorial - Part 1 - User Registration</span
+                ></a
+              >
+
+              <!-- video channel -->
+              <a
+                href="https://www.youtube.com/channel/UC9YTuDeKzDoyOphWHtdK0jA"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="suggested-video-channel"
+                  >Simplified Coding
+                  <!-- verified icon -->
+                  <!-- <div class="info-icons-container suggested-verified-container">
                 <svg class="info-icons" viewbox="0 0 30 30 " preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10 S17.52,2,12,2z M9.92,17.93l-4.95-4.95l2.05-2.05l2.9,2.9l7.35-7.35l2.05,2.05L9.92,17.93z" class="style-scope yt-icon"></path></g></svg>
               </div> -->
-            </span></a>
-            <a href="https://www.youtube.com/watch?v=0NFwF7L-YA8&ab_channel=SimplifiedCoding" target="_blank" rel="noopener noreferrer">
-            <span class="suggested-video-channel">475K views • 5 years ago</span></a>
-          </div>
+                </span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=0NFwF7L-YA8&ab_channel=SimplifiedCoding"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="suggested-video-channel"
+                  >475K views • 5 years ago</span
+                ></a
+              >
+            </div>
 
-          <!-- options icon -->
-          <button class="options-button">
-            <div class="options-icon-container">
-              <svg class="options-icons" viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" class="style-scope yt-icon"></path></g></svg>
+            <!-- options icon -->
+            <button class="options-button">
+              <div class="options-icon-container">
+                <svg
+                  class="options-icons"
+                  viewbox="0 0 24 24"
+                  preserveaspectratio="xMidYMid meet"
+                  focusable="false"
+                  style="
+                    pointer-events: none;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <g class="style-scope yt-icon">
+                    <path
+                      d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                      class="style-scope yt-icon"
+                    ></path>
+                  </g>
+                </svg>
               </div>
-          </button>
-        </div>
-        
-        <!-- suggested video 5 -->
-        <div class="suggested-video-container">
-
-          <!-- video preview -->
-          <div class="suggested-video-container-preview">
-
-            <!-- runtime -->
-            <div class="suggested-video-runtime">5:51</div>
-
-            <!-- suggested watch later -->
-            <div class="suggested-watch-later">
-              <svg viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" class="watch-later-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z" class="style-scope yt-icon"></path></g></svg>
-              <span class="icon-title">Watch Later</span>
-            </div>
-
-            <!-- suggested add to queue -->
-            <div class="suggested-add-to-queue">
-              <svg viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" class="watch-later-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z" class="style-scope yt-icon"></path></g></svg>
-              <span class="icon-title">Add to Queue</span>
-            </div>
-
-            <!-- preview image -->
-            <a href="https://www.youtube.com/watch?v=vP2MNhC_Igw&ab_channel=WebDevSimplified" target="_blank" rel="noopener noreferrer">
-              <img class="video-preview-image" src="https://i.ytimg.com/vi/vP2MNhC_Igw/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD-W5zc7G-bD1KEot28Msqj4O5Jfw" alt="">
-            </a>
+            </button>
           </div>
 
-          <!-- video info -->
-          <div class="suggested-video-container-info">
-            <!-- video title -->
-            <a href="https://www.youtube.com/watch?v=vP2MNhC_Igw&ab_channel=WebDevSimplified" target="_blank" rel="noopener noreferrer">
-            <span class="suggested-video-title">Stop Trying To Memorize Code - Do This Instead</span></a>
+          <!-- suggested video 5 -->
+          <div class="suggested-video-container">
+            <!-- video preview -->
+            <div class="suggested-video-container-preview">
+              <!-- runtime -->
+              <div class="suggested-video-runtime">5:51</div>
 
-            <!-- video channel -->
-            <a href="https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ" target="_blank" rel="noopener noreferrer">
-            <span class="suggested-video-channel">Web Dev Simplified
-              <!-- verified icon -->
-              <div class="info-icons-container suggested-verified-container">
-                <svg class="info-icons" viewbox="0 0 30 30 " preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10 S17.52,2,12,2z M9.92,17.93l-4.95-4.95l2.05-2.05l2.9,2.9l7.35-7.35l2.05,2.05L9.92,17.93z" class="style-scope yt-icon"></path></g></svg>
+              <!-- suggested watch later -->
+              <div class="suggested-watch-later">
+                <svg
+                  viewbox="0 0 24 24"
+                  preserveaspectratio="xMidYMid meet"
+                  focusable="false"
+                  class="watch-later-icon"
+                  style="
+                    pointer-events: none;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <g class="style-scope yt-icon">
+                    <path
+                      d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z"
+                      class="style-scope yt-icon"
+                    ></path>
+                  </g>
+                </svg>
+                <span class="icon-title">Watch Later</span>
               </div>
-            </span></a>
-            <a href="https://www.youtube.com/watch?v=vP2MNhC_Igw&ab_channel=WebDevSimplified" target="_blank" rel="noopener noreferrer">
-            <span class="suggested-video-channel">146K views • 2 weeks ago</span></a>
-          </div>
 
-          <!-- options icon -->
-          <button class="options-button">
-            <div class="options-icon-container">
-              <svg class="options-icons" viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" class="style-scope yt-icon"></path></g></svg>
+              <!-- suggested add to queue -->
+              <div class="suggested-add-to-queue">
+                <svg
+                  viewbox="0 0 24 24"
+                  preserveaspectratio="xMidYMid meet"
+                  focusable="false"
+                  class="watch-later-icon"
+                  style="
+                    pointer-events: none;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <g class="style-scope yt-icon">
+                    <path
+                      d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z"
+                      class="style-scope yt-icon"
+                    ></path>
+                  </g>
+                </svg>
+                <span class="icon-title">Add to Queue</span>
               </div>
-          </button>
-        </div>
-       
-        <!-- suggested video 6 -->
-        <div class="suggested-video-container">
 
-          <!-- video preview -->
-          <div class="suggested-video-container-preview">
-
-            <!-- runtime -->
-            <div class="suggested-video-runtime">7:19</div>
-
-            <!-- suggested watch later -->
-            <div class="suggested-watch-later">
-              <svg viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" class="watch-later-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z" class="style-scope yt-icon"></path></g></svg>
-              <span class="icon-title">Watch Later</span>
+              <!-- preview image -->
+              <a
+                href="https://www.youtube.com/watch?v=vP2MNhC_Igw&ab_channel=WebDevSimplified"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  class="video-preview-image"
+                  src="https://i.ytimg.com/vi/vP2MNhC_Igw/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD-W5zc7G-bD1KEot28Msqj4O5Jfw"
+                  alt=""
+                />
+              </a>
             </div>
 
-            <!-- suggested add to queue -->
-            <div class="suggested-add-to-queue">
-              <svg viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" class="watch-later-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z" class="style-scope yt-icon"></path></g></svg>
-              <span class="icon-title">Add to Queue</span>
+            <!-- video info -->
+            <div class="suggested-video-container-info">
+              <!-- video title -->
+              <a
+                href="https://www.youtube.com/watch?v=vP2MNhC_Igw&ab_channel=WebDevSimplified"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="suggested-video-title"
+                  >Stop Trying To Memorize Code - Do This Instead</span
+                ></a
+              >
+
+              <!-- video channel -->
+              <a
+                href="https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="suggested-video-channel"
+                  >Web Dev Simplified
+                  <!-- verified icon -->
+                  <div
+                    class="info-icons-container suggested-verified-container"
+                  >
+                    <svg
+                      class="info-icons"
+                      viewbox="0 0 30 30 "
+                      preserveaspectratio="xMidYMid meet"
+                      focusable="false"
+                      style="
+                        pointer-events: none;
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                      "
+                    >
+                      <g class="style-scope yt-icon">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10 S17.52,2,12,2z M9.92,17.93l-4.95-4.95l2.05-2.05l2.9,2.9l7.35-7.35l2.05,2.05L9.92,17.93z"
+                          class="style-scope yt-icon"
+                        ></path>
+                      </g>
+                    </svg>
+                  </div> </span
+              ></a>
+              <a
+                href="https://www.youtube.com/watch?v=vP2MNhC_Igw&ab_channel=WebDevSimplified"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="suggested-video-channel"
+                  >146K views • 2 weeks ago</span
+                ></a
+              >
             </div>
 
-            <!-- preview image -->
-            <a href="https://www.youtube.com/watch?v=RkBfu-W7tt0&ab_channel=Classsed" target="_blank" rel="noopener noreferrer">
-              <img class="video-preview-image" src="https://i.ytimg.com/vi/RkBfu-W7tt0/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCub96LUHVyef592tjsgEbJHOZnqQ" alt="">
-            </a>
+            <!-- options icon -->
+            <button class="options-button">
+              <div class="options-icon-container">
+                <svg
+                  class="options-icons"
+                  viewbox="0 0 24 24"
+                  preserveaspectratio="xMidYMid meet"
+                  focusable="false"
+                  style="
+                    pointer-events: none;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <g class="style-scope yt-icon">
+                    <path
+                      d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                      class="style-scope yt-icon"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+            </button>
           </div>
 
-          <!-- video info -->
-          <div class="suggested-video-container-info">
-            <!-- video title -->
-            <a href="https://www.youtube.com/watch?v=RkBfu-W7tt0&ab_channel=Classsed" target="_blank" rel="noopener noreferrer">
-            <span class="suggested-video-title">Full Stack React & Firebase: #1 Introduction</span></a>
+          <!-- suggested video 6 -->
+          <div class="suggested-video-container">
+            <!-- video preview -->
+            <div class="suggested-video-container-preview">
+              <!-- runtime -->
+              <div class="suggested-video-runtime">7:19</div>
 
-            <!-- video channel -->
-            <a href="https://www.youtube.com/channel/UC2-slOJImuSc20Drbf88qvg" target="_blank" rel="noopener noreferrer">
-            <span class="suggested-video-channel">Classsed
-              <!-- verified icon -->
-              <!-- <div class="info-icons-container suggested-verified-container">
+              <!-- suggested watch later -->
+              <div class="suggested-watch-later">
+                <svg
+                  viewbox="0 0 24 24"
+                  preserveaspectratio="xMidYMid meet"
+                  focusable="false"
+                  class="watch-later-icon"
+                  style="
+                    pointer-events: none;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <g class="style-scope yt-icon">
+                    <path
+                      d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z"
+                      class="style-scope yt-icon"
+                    ></path>
+                  </g>
+                </svg>
+                <span class="icon-title">Watch Later</span>
+              </div>
+
+              <!-- suggested add to queue -->
+              <div class="suggested-add-to-queue">
+                <svg
+                  viewbox="0 0 24 24"
+                  preserveaspectratio="xMidYMid meet"
+                  focusable="false"
+                  class="watch-later-icon"
+                  style="
+                    pointer-events: none;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <g class="style-scope yt-icon">
+                    <path
+                      d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z"
+                      class="style-scope yt-icon"
+                    ></path>
+                  </g>
+                </svg>
+                <span class="icon-title">Add to Queue</span>
+              </div>
+
+              <!-- preview image -->
+              <a
+                href="https://www.youtube.com/watch?v=RkBfu-W7tt0&ab_channel=Classsed"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  class="video-preview-image"
+                  src="https://i.ytimg.com/vi/RkBfu-W7tt0/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCub96LUHVyef592tjsgEbJHOZnqQ"
+                  alt=""
+                />
+              </a>
+            </div>
+
+            <!-- video info -->
+            <div class="suggested-video-container-info">
+              <!-- video title -->
+              <a
+                href="https://www.youtube.com/watch?v=RkBfu-W7tt0&ab_channel=Classsed"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="suggested-video-title"
+                  >Full Stack React & Firebase: #1 Introduction</span
+                ></a
+              >
+
+              <!-- video channel -->
+              <a
+                href="https://www.youtube.com/channel/UC2-slOJImuSc20Drbf88qvg"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="suggested-video-channel"
+                  >Classsed
+                  <!-- verified icon -->
+                  <!-- <div class="info-icons-container suggested-verified-container">
                 <svg class="info-icons" viewbox="0 0 30 30 " preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10 S17.52,2,12,2z M9.92,17.93l-4.95-4.95l2.05-2.05l2.9,2.9l7.35-7.35l2.05,2.05L9.92,17.93z" class="style-scope yt-icon"></path></g></svg>
               </div> -->
-            </span></a>
-            <a href="https://www.youtube.com/watch?v=RkBfu-W7tt0&ab_channel=Classsed" target="_blank" rel="noopener noreferrer">
-            <span class="suggested-video-channel">68K views • 2 years ago</span></a>
-          </div>
+                </span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=RkBfu-W7tt0&ab_channel=Classsed"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="suggested-video-channel"
+                  >68K views • 2 years ago</span
+                ></a
+              >
+            </div>
 
-          <!-- options icon -->
-          <button class="options-button">
-            <div class="options-icon-container">
-              <svg class="options-icons" viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" class="style-scope yt-icon"></path></g></svg>
+            <!-- options icon -->
+            <button class="options-button">
+              <div class="options-icon-container">
+                <svg
+                  class="options-icons"
+                  viewbox="0 0 24 24"
+                  preserveaspectratio="xMidYMid meet"
+                  focusable="false"
+                  style="
+                    pointer-events: none;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <g class="style-scope yt-icon">
+                    <path
+                      d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                      class="style-scope yt-icon"
+                    ></path>
+                  </g>
+                </svg>
               </div>
-          </button>
-        </div>
-
-        <!-- suggested video 7 -->
-        <div class="suggested-video-container">
-
-          <!-- video preview -->
-          <div class="suggested-video-container-preview">
-
-            <!-- runtime -->
-            <div class="suggested-video-runtime">15:35</div>
-
-            <!-- suggested watch later -->
-            <div class="suggested-watch-later">
-              <svg viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" class="watch-later-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z" class="style-scope yt-icon"></path></g></svg>
-              <span class="icon-title">Watch Later</span>
-            </div>
-
-            <!-- suggested add to queue -->
-            <div class="suggested-add-to-queue">
-              <svg viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" class="watch-later-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z" class="style-scope yt-icon"></path></g></svg>
-              <span class="icon-title">Add to Queue</span>
-            </div>
-
-            <!-- preview image -->
-            <a href="https://www.youtube.com/watch?v=cAkTmqRkSnc&ab_channel=KarlHadwen" target="_blank" rel="noopener noreferrer">
-              <img class="video-preview-image" src="https://i.ytimg.com/vi/cAkTmqRkSnc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLALmPNR_VPO8tN5BVV-6WyUhlWTRg" alt="">
-            </a>
+            </button>
           </div>
 
-          <!-- video info -->
-          <div class="suggested-video-container-info">
-            <!-- video title -->
-            <a href="https://www.youtube.com/watch?v=cAkTmqRkSnc&ab_channel=KarlHadwen" target="_blank" rel="noopener noreferrer">
-            <span class="suggested-video-title">Top 10 Web Development Tools 2021</span></a>
+          <!-- suggested video 7 -->
+          <div class="suggested-video-container">
+            <!-- video preview -->
+            <div class="suggested-video-container-preview">
+              <!-- runtime -->
+              <div class="suggested-video-runtime">15:35</div>
 
-            <!-- video channel -->
-            <a href="https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ" target="_blank" rel="noopener noreferrer">
-            <span class="suggested-video-channel">Karl Hadwen
-              <!-- verified icon -->
-              <!-- <div class="info-icons-container suggested-verified-container">
+              <!-- suggested watch later -->
+              <div class="suggested-watch-later">
+                <svg
+                  viewbox="0 0 24 24"
+                  preserveaspectratio="xMidYMid meet"
+                  focusable="false"
+                  class="watch-later-icon"
+                  style="
+                    pointer-events: none;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <g class="style-scope yt-icon">
+                    <path
+                      d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z"
+                      class="style-scope yt-icon"
+                    ></path>
+                  </g>
+                </svg>
+                <span class="icon-title">Watch Later</span>
+              </div>
+
+              <!-- suggested add to queue -->
+              <div class="suggested-add-to-queue">
+                <svg
+                  viewbox="0 0 24 24"
+                  preserveaspectratio="xMidYMid meet"
+                  focusable="false"
+                  class="watch-later-icon"
+                  style="
+                    pointer-events: none;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <g class="style-scope yt-icon">
+                    <path
+                      d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z"
+                      class="style-scope yt-icon"
+                    ></path>
+                  </g>
+                </svg>
+                <span class="icon-title">Add to Queue</span>
+              </div>
+
+              <!-- preview image -->
+              <a
+                href="https://www.youtube.com/watch?v=cAkTmqRkSnc&ab_channel=KarlHadwen"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  class="video-preview-image"
+                  src="https://i.ytimg.com/vi/cAkTmqRkSnc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLALmPNR_VPO8tN5BVV-6WyUhlWTRg"
+                  alt=""
+                />
+              </a>
+            </div>
+
+            <!-- video info -->
+            <div class="suggested-video-container-info">
+              <!-- video title -->
+              <a
+                href="https://www.youtube.com/watch?v=cAkTmqRkSnc&ab_channel=KarlHadwen"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="suggested-video-title"
+                  >Top 10 Web Development Tools 2021</span
+                ></a
+              >
+
+              <!-- video channel -->
+              <a
+                href="https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="suggested-video-channel"
+                  >Karl Hadwen
+                  <!-- verified icon -->
+                  <!-- <div class="info-icons-container suggested-verified-container">
                 <svg class="info-icons" viewbox="0 0 30 30 " preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10 S17.52,2,12,2z M9.92,17.93l-4.95-4.95l2.05-2.05l2.9,2.9l7.35-7.35l2.05,2.05L9.92,17.93z" class="style-scope yt-icon"></path></g></svg>
               </div> -->
-            </span></a>
-            <a href="https://www.youtube.com/watch?v=cAkTmqRkSnc&ab_channel=KarlHadwen" target="_blank" rel="noopener noreferrer">
-            <span class="suggested-video-channel">1.2K views • 3 days ago</span></a>
-          </div>
+                </span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=cAkTmqRkSnc&ab_channel=KarlHadwen"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="suggested-video-channel"
+                  >1.2K views • 3 days ago</span
+                ></a
+              >
+            </div>
 
-          <!-- options icon -->
-          <button class="options-button">
-            <div class="options-icon-container">
-              <svg class="options-icons" viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" class="style-scope yt-icon"></path></g></svg>
+            <!-- options icon -->
+            <button class="options-button">
+              <div class="options-icon-container">
+                <svg
+                  class="options-icons"
+                  viewbox="0 0 24 24"
+                  preserveaspectratio="xMidYMid meet"
+                  focusable="false"
+                  style="
+                    pointer-events: none;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <g class="style-scope yt-icon">
+                    <path
+                      d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                      class="style-scope yt-icon"
+                    ></path>
+                  </g>
+                </svg>
               </div>
-          </button>
-        </div>
-       
-        <!-- suggested video 8 -->
-        <div class="suggested-video-container">
-
-          <!-- video preview -->
-          <div class="suggested-video-container-preview">
-
-            <!-- runtime -->
-            <div class="suggested-video-runtime">13:59:03</div>
-
-            <!-- suggested watch later -->
-            <div class="suggested-watch-later">
-              <svg viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" class="watch-later-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z" class="style-scope yt-icon"></path></g></svg>
-              <span class="icon-title">Watch Later</span>
-            </div>
-
-            <!-- suggested add to queue -->
-            <div class="suggested-add-to-queue">
-              <svg viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" class="watch-later-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z" class="style-scope yt-icon"></path></g></svg>
-              <span class="icon-title">Add to Queue</span>
-            </div>
-
-            <!-- preview image -->
-            <a href="https://www.youtube.com/watch?v=I6ypD7qv3Z8&ab_channel=BenAwad" target="_blank" rel="noopener noreferrer">
-              <img class="video-preview-image" src="https://i.ytimg.com/vi/I6ypD7qv3Z8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCMc0mEBtfjFPg_of_wp9qir0oinA" alt="">
-            </a>
+            </button>
           </div>
 
-          <!-- video info -->
-          <div class="suggested-video-container-info">
-            <!-- video title -->
-            <a href="https://www.youtube.com/watch?v=I6ypD7qv3Z8&ab_channel=BenAwad" target="_blank" rel="noopener noreferrer">
-            <span class="suggested-video-title">Fullstack React GraphQL TypeScript Tutorial</span></a>
+          <!-- suggested video 8 -->
+          <div class="suggested-video-container">
+            <!-- video preview -->
+            <div class="suggested-video-container-preview">
+              <!-- runtime -->
+              <div class="suggested-video-runtime">13:59:03</div>
 
-            <!-- video channel -->
-            <a href="https://www.youtube.com/channel/UC-8QAzbLcRglXeN_MY9blyw" target="_blank" rel="noopener noreferrer">
-            <span class="suggested-video-channel">BenAwad
-              <!-- verified icon -->
-              <div class="info-icons-container suggested-verified-container">
-                <svg class="info-icons" viewbox="0 0 30 30 " preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10 S17.52,2,12,2z M9.92,17.93l-4.95-4.95l2.05-2.05l2.9,2.9l7.35-7.35l2.05,2.05L9.92,17.93z" class="style-scope yt-icon"></path></g></svg>
+              <!-- suggested watch later -->
+              <div class="suggested-watch-later">
+                <svg
+                  viewbox="0 0 24 24"
+                  preserveaspectratio="xMidYMid meet"
+                  focusable="false"
+                  class="watch-later-icon"
+                  style="
+                    pointer-events: none;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <g class="style-scope yt-icon">
+                    <path
+                      d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z"
+                      class="style-scope yt-icon"
+                    ></path>
+                  </g>
+                </svg>
+                <span class="icon-title">Watch Later</span>
               </div>
-            </span></a>
-            <a href="https://www.youtube.com/watch?v=I6ypD7qv3Z8&ab_channel=BenAwad" target="_blank" rel="noopener noreferrer">
-            <span class="suggested-video-channel">614K views • 10 months ago</span></a>
-          </div>
 
-          <!-- options icon -->
-          <button class="options-button">
-            <div class="options-icon-container">
-              <svg class="options-icons" viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" class="style-scope yt-icon"></path></g></svg>
+              <!-- suggested add to queue -->
+              <div class="suggested-add-to-queue">
+                <svg
+                  viewbox="0 0 24 24"
+                  preserveaspectratio="xMidYMid meet"
+                  focusable="false"
+                  class="watch-later-icon"
+                  style="
+                    pointer-events: none;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <g class="style-scope yt-icon">
+                    <path
+                      d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z"
+                      class="style-scope yt-icon"
+                    ></path>
+                  </g>
+                </svg>
+                <span class="icon-title">Add to Queue</span>
               </div>
-          </button>
-        </div>
 
-        <!-- suggested video 9 -->
-        <div class="suggested-video-container">
-
-          <!-- video preview -->
-          <div class="suggested-video-container-preview">
-
-            <!-- runtime -->
-            <div class="suggested-video-runtime">45:00</div>
-
-            <!-- suggested watch later -->
-            <div class="suggested-watch-later">
-              <svg viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" class="watch-later-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z" class="style-scope yt-icon"></path></g></svg>
-              <span class="icon-title">Watch Later</span>
+              <!-- preview image -->
+              <a
+                href="https://www.youtube.com/watch?v=I6ypD7qv3Z8&ab_channel=BenAwad"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  class="video-preview-image"
+                  src="https://i.ytimg.com/vi/I6ypD7qv3Z8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCMc0mEBtfjFPg_of_wp9qir0oinA"
+                  alt=""
+                />
+              </a>
             </div>
 
-            <!-- suggested add to queue -->
-            <div class="suggested-add-to-queue">
-              <svg viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" class="watch-later-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z" class="style-scope yt-icon"></path></g></svg>
-              <span class="icon-title">Add to Queue</span>
+            <!-- video info -->
+            <div class="suggested-video-container-info">
+              <!-- video title -->
+              <a
+                href="https://www.youtube.com/watch?v=I6ypD7qv3Z8&ab_channel=BenAwad"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="suggested-video-title"
+                  >Fullstack React GraphQL TypeScript Tutorial</span
+                ></a
+              >
+
+              <!-- video channel -->
+              <a
+                href="https://www.youtube.com/channel/UC-8QAzbLcRglXeN_MY9blyw"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="suggested-video-channel"
+                  >BenAwad
+                  <!-- verified icon -->
+                  <div
+                    class="info-icons-container suggested-verified-container"
+                  >
+                    <svg
+                      class="info-icons"
+                      viewbox="0 0 30 30 "
+                      preserveaspectratio="xMidYMid meet"
+                      focusable="false"
+                      style="
+                        pointer-events: none;
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                      "
+                    >
+                      <g class="style-scope yt-icon">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10 S17.52,2,12,2z M9.92,17.93l-4.95-4.95l2.05-2.05l2.9,2.9l7.35-7.35l2.05,2.05L9.92,17.93z"
+                          class="style-scope yt-icon"
+                        ></path>
+                      </g>
+                    </svg>
+                  </div> </span
+              ></a>
+              <a
+                href="https://www.youtube.com/watch?v=I6ypD7qv3Z8&ab_channel=BenAwad"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="suggested-video-channel"
+                  >614K views • 10 months ago</span
+                ></a
+              >
             </div>
 
-            <!-- preview image -->
-            <a href="https://www.youtube.com/watch?v=DCZdCKjnBCs&ab_channel=WesBos" target="_blank" rel="noopener noreferrer">
-              <img class="video-preview-image" src="https://i.ytimg.com/vi/DCZdCKjnBCs/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDGQqj1AN1IpfSFuksWSEnzhZGSzA" alt="">
-            </a>
+            <!-- options icon -->
+            <button class="options-button">
+              <div class="options-icon-container">
+                <svg
+                  class="options-icons"
+                  viewbox="0 0 24 24"
+                  preserveaspectratio="xMidYMid meet"
+                  focusable="false"
+                  style="
+                    pointer-events: none;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <g class="style-scope yt-icon">
+                    <path
+                      d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                      class="style-scope yt-icon"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+            </button>
           </div>
 
-          <!-- video info -->
-          <div class="suggested-video-container-info">
-            <!-- video title -->
-            <a href="https://www.youtube.com/watch?v=DCZdCKjnBCs&ab_channel=WesBos" target="_blank" rel="noopener noreferrer">
-            <span class="suggested-video-title">CSS Grid in 45 Minutes!</span></a>
+          <!-- suggested video 9 -->
+          <div class="suggested-video-container">
+            <!-- video preview -->
+            <div class="suggested-video-container-preview">
+              <!-- runtime -->
+              <div class="suggested-video-runtime">45:00</div>
 
-            <!-- video channel -->
-            <a href="https://www.youtube.com/user/wesbos" target="_blank" rel="noopener noreferrer">
-            <span class="suggested-video-channel">Wes Bos
-              <!-- verified icon -->
-              <!-- <div class="info-icons-container suggested-verified-container">
+              <!-- suggested watch later -->
+              <div class="suggested-watch-later">
+                <svg
+                  viewbox="0 0 24 24"
+                  preserveaspectratio="xMidYMid meet"
+                  focusable="false"
+                  class="watch-later-icon"
+                  style="
+                    pointer-events: none;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <g class="style-scope yt-icon">
+                    <path
+                      d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z"
+                      class="style-scope yt-icon"
+                    ></path>
+                  </g>
+                </svg>
+                <span class="icon-title">Watch Later</span>
+              </div>
+
+              <!-- suggested add to queue -->
+              <div class="suggested-add-to-queue">
+                <svg
+                  viewbox="0 0 24 24"
+                  preserveaspectratio="xMidYMid meet"
+                  focusable="false"
+                  class="watch-later-icon"
+                  style="
+                    pointer-events: none;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <g class="style-scope yt-icon">
+                    <path
+                      d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z"
+                      class="style-scope yt-icon"
+                    ></path>
+                  </g>
+                </svg>
+                <span class="icon-title">Add to Queue</span>
+              </div>
+
+              <!-- preview image -->
+              <a
+                href="https://www.youtube.com/watch?v=DCZdCKjnBCs&ab_channel=WesBos"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  class="video-preview-image"
+                  src="https://i.ytimg.com/vi/DCZdCKjnBCs/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDGQqj1AN1IpfSFuksWSEnzhZGSzA"
+                  alt=""
+                />
+              </a>
+            </div>
+
+            <!-- video info -->
+            <div class="suggested-video-container-info">
+              <!-- video title -->
+              <a
+                href="https://www.youtube.com/watch?v=DCZdCKjnBCs&ab_channel=WesBos"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="suggested-video-title"
+                  >CSS Grid in 45 Minutes!</span
+                ></a
+              >
+
+              <!-- video channel -->
+              <a
+                href="https://www.youtube.com/user/wesbos"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="suggested-video-channel"
+                  >Wes Bos
+                  <!-- verified icon -->
+                  <!-- <div class="info-icons-container suggested-verified-container">
                 <svg class="info-icons" viewbox="0 0 30 30 " preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10 S17.52,2,12,2z M9.92,17.93l-4.95-4.95l2.05-2.05l2.9,2.9l7.35-7.35l2.05,2.05L9.92,17.93z" class="style-scope yt-icon"></path></g></svg>
               </div> -->
-            </span></a>
-            <a href="https://www.youtube.com/watch?v=DCZdCKjnBCs&ab_channel=WesBos" target="_blank" rel="noopener noreferrer">
-            <span class="suggested-video-channel">44K views • 2 years ago</span></a>
+                </span></a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=DCZdCKjnBCs&ab_channel=WesBos"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="suggested-video-channel"
+                  >44K views • 2 years ago</span
+                ></a
+              >
+            </div>
+
+            <!-- options icon -->
+            <button class="options-button">
+              <div class="options-icon-container">
+                <svg
+                  class="options-icons"
+                  viewbox="0 0 24 24"
+                  preserveaspectratio="xMidYMid meet"
+                  focusable="false"
+                  style="
+                    pointer-events: none;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <g class="style-scope yt-icon">
+                    <path
+                      d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                      class="style-scope yt-icon"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+            </button>
           </div>
 
-          <!-- options icon -->
-          <button class="options-button">
-            <div class="options-icon-container">
-              <svg class="options-icons" viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" class="style-scope yt-icon"></path></g></svg>
+          <!-- suggested video 10 -->
+          <div class="suggested-video-container">
+            <!-- video preview -->
+            <div class="suggested-video-container-preview">
+              <!-- runtime -->
+              <div class="suggested-video-runtime">3:26:42</div>
+
+              <!-- suggested watch later -->
+              <div class="suggested-watch-later">
+                <svg
+                  viewbox="0 0 24 24"
+                  preserveaspectratio="xMidYMid meet"
+                  focusable="false"
+                  class="watch-later-icon"
+                  style="
+                    pointer-events: none;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <g class="style-scope yt-icon">
+                    <path
+                      d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z"
+                      class="style-scope yt-icon"
+                    ></path>
+                  </g>
+                </svg>
+                <span class="icon-title">Watch Later</span>
               </div>
-          </button>
+
+              <!-- suggested add to queue -->
+              <div class="suggested-add-to-queue">
+                <svg
+                  viewbox="0 0 24 24"
+                  preserveaspectratio="xMidYMid meet"
+                  focusable="false"
+                  class="watch-later-icon"
+                  style="
+                    pointer-events: none;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <g class="style-scope yt-icon">
+                    <path
+                      d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z"
+                      class="style-scope yt-icon"
+                    ></path>
+                  </g>
+                </svg>
+                <span class="icon-title">Add to Queue</span>
+              </div>
+
+              <!-- preview image -->
+              <a
+                href="https://www.youtube.com/watch?v=PkZNo7MFNFg&ab_channel=freeCodeCamp.org"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  class="video-preview-image"
+                  src="https://i.ytimg.com/vi/PkZNo7MFNFg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAwNU5OSSZjemAET6tnzWmSp_GrGw"
+                  alt=""
+                />
+              </a>
+            </div>
+
+            <!-- video info -->
+            <div class="suggested-video-container-info">
+              <!-- video title -->
+              <a
+                href="https://www.youtube.com/watch?v=PkZNo7MFNFg&ab_channel=freeCodeCamp.org"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="suggested-video-title"
+                  >Learn JavaScript - Full Course for Beginners</span
+                ></a
+              >
+
+              <!-- video channel -->
+              <a
+                href="https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="suggested-video-channel"
+                  >freeCodeCamp.org
+                  <!-- verified icon -->
+                  <div
+                    class="info-icons-container suggested-verified-container"
+                  >
+                    <svg
+                      class="info-icons"
+                      viewbox="0 0 30 30 "
+                      preserveaspectratio="xMidYMid meet"
+                      focusable="false"
+                      style="
+                        pointer-events: none;
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                      "
+                    >
+                      <g class="style-scope yt-icon">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10 S17.52,2,12,2z M9.92,17.93l-4.95-4.95l2.05-2.05l2.9,2.9l7.35-7.35l2.05,2.05L9.92,17.93z"
+                          class="style-scope yt-icon"
+                        ></path>
+                      </g>
+                    </svg>
+                  </div> </span
+              ></a>
+              <a
+                href="https://www.youtube.com/watch?v=PkZNo7MFNFg&ab_channel=freeCodeCamp.org"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="suggested-video-channel"
+                  >6.5M views • 2 years ago</span
+                ></a
+              >
+            </div>
+
+            <!-- options icon -->
+            <button class="options-button">
+              <div class="options-icon-container">
+                <svg
+                  class="options-icons"
+                  viewbox="0 0 24 24"
+                  preserveaspectratio="xMidYMid meet"
+                  focusable="false"
+                  style="
+                    pointer-events: none;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <g class="style-scope yt-icon">
+                    <path
+                      d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                      class="style-scope yt-icon"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+            </button>
+          </div>
+
+          <!-- suggested video 11 -->
+          <div class="suggested-video-container">
+            <!-- video preview -->
+            <div class="suggested-video-container-preview">
+              <!-- runtime -->
+              <div class="suggested-video-runtime">1:01:44</div>
+
+              <!-- suggested watch later -->
+              <div class="suggested-watch-later">
+                <svg
+                  viewbox="0 0 24 24"
+                  preserveaspectratio="xMidYMid meet"
+                  focusable="false"
+                  class="watch-later-icon"
+                  style="
+                    pointer-events: none;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <g class="style-scope yt-icon">
+                    <path
+                      d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z"
+                      class="style-scope yt-icon"
+                    ></path>
+                  </g>
+                </svg>
+                <span class="icon-title">Watch Later</span>
+              </div>
+
+              <!-- suggested add to queue -->
+              <div class="suggested-add-to-queue">
+                <svg
+                  viewbox="0 0 24 24"
+                  preserveaspectratio="xMidYMid meet"
+                  focusable="false"
+                  class="watch-later-icon"
+                  style="
+                    pointer-events: none;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <g class="style-scope yt-icon">
+                    <path
+                      d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z"
+                      class="style-scope yt-icon"
+                    ></path>
+                  </g>
+                </svg>
+                <span class="icon-title">Add to Queue</span>
+              </div>
+
+              <!-- preview image -->
+              <a
+                href="https://www.youtube.com/watch?v=vR06jWwfQ3I&ab_channel=Codecademy"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  class="video-preview-image"
+                  src="https://i.ytimg.com/vi/vR06jWwfQ3I/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAzyD34WMwc40D0D2Ok-IFoUd31zg"
+                  alt=""
+                />
+              </a>
+            </div>
+
+            <!-- video info -->
+            <div class="suggested-video-container-info">
+              <!-- video title -->
+              <a
+                href="https://www.youtube.com/watch?v=vR06jWwfQ3I&ab_channel=Codecademy"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="suggested-video-title"
+                  >Creative Coding with Codecademy #1: Intro to p5.js</span
+                ></a
+              >
+
+              <!-- video channel -->
+              <a
+                href="https://www.youtube.com/channel/UC5CMtpogD_P3mOoeiDHD5eQ"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="suggested-video-channel"
+                  >Codecademy
+                  <!-- verified icon -->
+                  <div
+                    class="info-icons-container suggested-verified-container"
+                  >
+                    <svg
+                      class="info-icons"
+                      viewbox="0 0 30 30 "
+                      preserveaspectratio="xMidYMid meet"
+                      focusable="false"
+                      style="
+                        pointer-events: none;
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                      "
+                    >
+                      <g class="style-scope yt-icon">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10 S17.52,2,12,2z M9.92,17.93l-4.95-4.95l2.05-2.05l2.9,2.9l7.35-7.35l2.05,2.05L9.92,17.93z"
+                          class="style-scope yt-icon"
+                        ></path>
+                      </g>
+                    </svg>
+                  </div> </span
+              ></a>
+              <a
+                href="https://www.youtube.com/watch?v=vR06jWwfQ3I&ab_channel=Codecademy"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="suggested-video-channel"
+                  >6.9K views • 4 months ago</span
+                ></a
+              >
+            </div>
+
+            <!-- options icon -->
+            <button class="options-button">
+              <div class="options-icon-container">
+                <svg
+                  class="options-icons"
+                  viewbox="0 0 24 24"
+                  preserveaspectratio="xMidYMid meet"
+                  focusable="false"
+                  style="
+                    pointer-events: none;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <g class="style-scope yt-icon">
+                    <path
+                      d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                      class="style-scope yt-icon"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+            </button>
+          </div>
+
+          <!-- suggested video 12 -->
+          <div class="suggested-video-container">
+            <!-- video preview -->
+            <div class="suggested-video-container-preview">
+              <!-- runtime -->
+              <div class="suggested-video-runtime">1:57:37</div>
+
+              <!-- suggested watch later -->
+              <div class="suggested-watch-later">
+                <svg
+                  viewbox="0 0 24 24"
+                  preserveaspectratio="xMidYMid meet"
+                  focusable="false"
+                  class="watch-later-icon"
+                  style="
+                    pointer-events: none;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <g class="style-scope yt-icon">
+                    <path
+                      d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z"
+                      class="style-scope yt-icon"
+                    ></path>
+                  </g>
+                </svg>
+                <span class="icon-title">Watch Later</span>
+              </div>
+
+              <!-- suggested add to queue -->
+              <div class="suggested-add-to-queue">
+                <svg
+                  viewbox="0 0 24 24"
+                  preserveaspectratio="xMidYMid meet"
+                  focusable="false"
+                  class="watch-later-icon"
+                  style="
+                    pointer-events: none;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <g class="style-scope yt-icon">
+                    <path
+                      d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z"
+                      class="style-scope yt-icon"
+                    ></path>
+                  </g>
+                </svg>
+                <span class="icon-title">Add to Queue</span>
+              </div>
+
+              <!-- preview image -->
+              <a
+                href="https://www.youtube.com/watch?v=gCo6JqGMi30&ab_channel=DaniKrossing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  class="video-preview-image"
+                  src="https://i.ytimg.com/vi/gCo6JqGMi30/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBKOWpELMRglzRzIHdlmBG1XLcZCA"
+                  alt=""
+                />
+              </a>
+            </div>
+
+            <!-- video info -->
+            <div class="suggested-video-container-info">
+              <!-- video title -->
+              <a
+                href="https://www.youtube.com/watch?v=gCo6JqGMi30&ab_channel=DaniKrossing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="suggested-video-title"
+                  >How To Create A Login System In PHP For Beginners |
+                  Procedural MySQLi | PHP Tutorial</span
+                ></a
+              >
+
+              <!-- video channel -->
+              <a
+                href="https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="suggested-video-channel"
+                  >Dani Krossing
+                  <!-- verified icon -->
+                  <div
+                    class="info-icons-container suggested-verified-container"
+                  >
+                    <svg
+                      class="info-icons"
+                      viewbox="0 0 30 30 "
+                      preserveaspectratio="xMidYMid meet"
+                      focusable="false"
+                      style="
+                        pointer-events: none;
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                      "
+                    >
+                      <g class="style-scope yt-icon">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10 S17.52,2,12,2z M9.92,17.93l-4.95-4.95l2.05-2.05l2.9,2.9l7.35-7.35l2.05,2.05L9.92,17.93z"
+                          class="style-scope yt-icon"
+                        ></path>
+                      </g>
+                    </svg>
+                  </div> </span
+              ></a>
+              <a
+                href="https://www.youtube.com/watch?v=gCo6JqGMi30&ab_channel=DaniKrossing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="suggested-video-channel"
+                  >286K views • 9 months ago</span
+                ></a
+              >
+            </div>
+
+            <!-- options icon -->
+            <button class="options-button">
+              <div class="options-icon-container">
+                <svg
+                  class="options-icons"
+                  viewbox="0 0 24 24"
+                  preserveaspectratio="xMidYMid meet"
+                  focusable="false"
+                  style="
+                    pointer-events: none;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <g class="style-scope yt-icon">
+                    <path
+                      d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                      class="style-scope yt-icon"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+            </button>
+          </div>
         </div>
-       
-        <!-- suggested video 10 -->
-        <div class="suggested-video-container">
-
-          <!-- video preview -->
-          <div class="suggested-video-container-preview">
-
-            <!-- runtime -->
-            <div class="suggested-video-runtime">3:26:42</div>
-
-            <!-- suggested watch later -->
-            <div class="suggested-watch-later">
-              <svg viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" class="watch-later-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z" class="style-scope yt-icon"></path></g></svg>
-              <span class="icon-title">Watch Later</span>
-            </div>
-
-            <!-- suggested add to queue -->
-            <div class="suggested-add-to-queue">
-              <svg viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" class="watch-later-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z" class="style-scope yt-icon"></path></g></svg>
-              <span class="icon-title">Add to Queue</span>
-            </div>
-
-            <!-- preview image -->
-            <a href="https://www.youtube.com/watch?v=PkZNo7MFNFg&ab_channel=freeCodeCamp.org" target="_blank" rel="noopener noreferrer">
-              <img class="video-preview-image" src="https://i.ytimg.com/vi/PkZNo7MFNFg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAwNU5OSSZjemAET6tnzWmSp_GrGw" alt="">
-            </a>
-          </div>
-
-          <!-- video info -->
-          <div class="suggested-video-container-info">
-            <!-- video title -->
-            <a href="https://www.youtube.com/watch?v=PkZNo7MFNFg&ab_channel=freeCodeCamp.org" target="_blank" rel="noopener noreferrer">
-            <span class="suggested-video-title">Learn JavaScript - Full Course for Beginners</span></a>
-
-            <!-- video channel -->
-            <a href="https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ" target="_blank" rel="noopener noreferrer">
-            <span class="suggested-video-channel">freeCodeCamp.org
-              <!-- verified icon -->
-              <div class="info-icons-container suggested-verified-container">
-                <svg class="info-icons" viewbox="0 0 30 30 " preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10 S17.52,2,12,2z M9.92,17.93l-4.95-4.95l2.05-2.05l2.9,2.9l7.35-7.35l2.05,2.05L9.92,17.93z" class="style-scope yt-icon"></path></g></svg>
-              </div>
-            </span></a>
-            <a href="https://www.youtube.com/watch?v=PkZNo7MFNFg&ab_channel=freeCodeCamp.org" target="_blank" rel="noopener noreferrer">
-            <span class="suggested-video-channel">6.5M views • 2 years ago</span></a>
-          </div>
-
-          <!-- options icon -->
-          <button class="options-button">
-            <div class="options-icon-container">
-              <svg class="options-icons" viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" class="style-scope yt-icon"></path></g></svg>
-              </div>
-          </button>
-        </div>
-
-        <!-- suggested video 11 -->
-        <div class="suggested-video-container">
-
-          <!-- video preview -->
-          <div class="suggested-video-container-preview">
-
-            <!-- runtime -->
-            <div class="suggested-video-runtime">1:01:44</div>
-
-            <!-- suggested watch later -->
-            <div class="suggested-watch-later">
-              <svg viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" class="watch-later-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z" class="style-scope yt-icon"></path></g></svg>
-              <span class="icon-title">Watch Later</span>
-            </div>
-
-            <!-- suggested add to queue -->
-            <div class="suggested-add-to-queue">
-              <svg viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" class="watch-later-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z" class="style-scope yt-icon"></path></g></svg>
-              <span class="icon-title">Add to Queue</span>
-            </div>
-
-            <!-- preview image -->
-            <a href="https://www.youtube.com/watch?v=vR06jWwfQ3I&ab_channel=Codecademy" target="_blank" rel="noopener noreferrer">
-              <img class="video-preview-image" src="https://i.ytimg.com/vi/vR06jWwfQ3I/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAzyD34WMwc40D0D2Ok-IFoUd31zg" alt="">
-            </a>
-          </div>
-
-          <!-- video info -->
-          <div class="suggested-video-container-info">
-            <!-- video title -->
-            <a href="https://www.youtube.com/watch?v=vR06jWwfQ3I&ab_channel=Codecademy" target="_blank" rel="noopener noreferrer">
-            <span class="suggested-video-title">Creative Coding with Codecademy #1: Intro to p5.js</span></a>
-
-            <!-- video channel -->
-            <a href="https://www.youtube.com/channel/UC5CMtpogD_P3mOoeiDHD5eQ" target="_blank" rel="noopener noreferrer">
-            <span class="suggested-video-channel">Codecademy
-              <!-- verified icon -->
-              <div class="info-icons-container suggested-verified-container">
-                <svg class="info-icons" viewbox="0 0 30 30 " preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10 S17.52,2,12,2z M9.92,17.93l-4.95-4.95l2.05-2.05l2.9,2.9l7.35-7.35l2.05,2.05L9.92,17.93z" class="style-scope yt-icon"></path></g></svg>
-              </div>
-            </span></a>
-            <a href="https://www.youtube.com/watch?v=vR06jWwfQ3I&ab_channel=Codecademy" target="_blank" rel="noopener noreferrer">
-            <span class="suggested-video-channel">6.9K views • 4 months ago</span></a>
-          </div>
-
-          <!-- options icon -->
-          <button class="options-button">
-            <div class="options-icon-container">
-              <svg class="options-icons" viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" class="style-scope yt-icon"></path></g></svg>
-              </div>
-          </button>
-        </div>
-       
-        <!-- suggested video 12 -->
-        <div class="suggested-video-container">
-
-          <!-- video preview -->
-          <div class="suggested-video-container-preview">
-
-            <!-- runtime -->
-            <div class="suggested-video-runtime">1:57:37</div>
-
-            <!-- suggested watch later -->
-            <div class="suggested-watch-later">
-              <svg viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" class="watch-later-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z" class="style-scope yt-icon"></path></g></svg>
-              <span class="icon-title">Watch Later</span>
-            </div>
-
-            <!-- suggested add to queue -->
-            <div class="suggested-add-to-queue">
-              <svg viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" class="watch-later-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z" class="style-scope yt-icon"></path></g></svg>
-              <span class="icon-title">Add to Queue</span>
-            </div>
-
-            <!-- preview image -->
-            <a href="https://www.youtube.com/watch?v=gCo6JqGMi30&ab_channel=DaniKrossing" target="_blank" rel="noopener noreferrer">
-              <img class="video-preview-image" src="https://i.ytimg.com/vi/gCo6JqGMi30/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBKOWpELMRglzRzIHdlmBG1XLcZCA" alt="">
-            </a>
-          </div>
-
-          <!-- video info -->
-          <div class="suggested-video-container-info">
-            <!-- video title -->
-            <a href="https://www.youtube.com/watch?v=gCo6JqGMi30&ab_channel=DaniKrossing" target="_blank" rel="noopener noreferrer">
-            <span class="suggested-video-title">How To Create A Login System In PHP For Beginners | Procedural MySQLi | PHP Tutorial</span></a>
-
-            <!-- video channel -->
-            <a href="https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ" target="_blank" rel="noopener noreferrer">
-            <span class="suggested-video-channel">Dani Krossing
-              <!-- verified icon -->
-              <div class="info-icons-container suggested-verified-container">
-                <svg class="info-icons" viewbox="0 0 30 30 " preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10 S17.52,2,12,2z M9.92,17.93l-4.95-4.95l2.05-2.05l2.9,2.9l7.35-7.35l2.05,2.05L9.92,17.93z" class="style-scope yt-icon"></path></g></svg>
-              </div>
-            </span></a>
-            <a href="https://www.youtube.com/watch?v=gCo6JqGMi30&ab_channel=DaniKrossing" target="_blank" rel="noopener noreferrer">
-            <span class="suggested-video-channel">286K views • 9 months ago</span></a>
-          </div>
-
-          <!-- options icon -->
-          <button class="options-button">
-            <div class="options-icon-container">
-              <svg class="options-icons" viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" class="style-scope yt-icon"></path></g></svg>
-              </div>
-          </button>
-        </div>
-
-      </div>
-
-    </aside>
-  </div>
-</body>
+      </aside>
+    </div>
+  </body>
 </html>
