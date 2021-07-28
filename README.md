@@ -1,5 +1,6 @@
 # youtube_page
 
+- <a href="https://kfig21.github.io/youtube_page/" target="_blank" rel="noopener noreferrer">View the project here!</a>
 - Made for The Odin Project curriculum
 - Re-create a YouTube page by embedding a YouTube video and styling the page with HTML and CSS
 - (Personally, I wanted to use React so I didnt have to recreate a lot of elements but this project is for HTML/CSS so I stuck with the basics)
