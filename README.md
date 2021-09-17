@@ -7,7 +7,9 @@
 
 <h3>Demo GIF</h3>
 
-![](demo.gif)
+<a href="demo.gif" target="_blank" rel="noopener noreferrer">
+  <img src="demo.gif" alt="demo gif" />
+</a>
 
 -----------------------------
 
