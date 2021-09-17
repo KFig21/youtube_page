@@ -1,4 +1,4 @@
-# youtube_page
+# Embedding Videos and Images Project
 
 <p><a href="https://kfig21.github.io/youtube_page/" target="_blank" rel="noopener noreferrer">View the project here!</a> 👀</p>
 
